@@ -1,0 +1,27 @@
+*To Open a url in default browser using command line
+:> xdg-open https://URL.com
+ #install xdg first :> apt-get install xdg-util
+
+*List all the processes running in the system
+:> ps aux
+
+*Search a process in ps aux
+:> ps aux | grep <process name>
+
+Where grep is a filtering tool  you can use it for any kind of the list to search for 
+
+*find command (Advanced)
+https://www.geeksforgeeks.org/find-command-in-linux-with-examples/
+
+*User management
+https://www.geeksforgeeks.org/user-management-in-linux/
+
+*To get the user's home director
+:> eval echo ~user_name
+
+*Root permissions to user and groups
+https://linoxide.com/give-normal-user-root-privileges/
+https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu/
+
+*make compressed tar fiel
+:> tar czf compressedfilename.tar.gz

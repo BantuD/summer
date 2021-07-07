@@ -1,0 +1,65 @@
+Update package List:
+Local database of packages availble from remote
+: sudo apt-get update
+: sudo apt update
+
+Updata installed packages in debian
+: sudo apt-get upgrade
+> this will only update the installed packages  in the system 
+: sudo apt-get dist-upgrade 
+> This will upgrade installed packages as well as will change and remove old packages to satify the dependencies
+
+:sudo apt upgrade 
+> same command as sudo apt-get upgrade
+
+:sudo apt-get full upgrade
+>Same command as sudo apt-get dist-upgrade
+
+*To search a package
+: sudo apt-cache search search_string
+same will be
+:sudo apt search search_string
+
+*Get the information about the package
+: sudo apt-cache show package_name
+> show locally cached info about the package
+: sudo apt show package_name 
+
+*To install a package package from repository
+:sudo apt-get install package_name
+
+:sudo apt-get install package1 package2 package3...
+>To install multiple packages
+
+:sudo apt-get install -y package.
+>Assumes y where apt prompts to continue 
+
+:sudo apt install package 
+>Display colored progress bar
+
+*Install a package from local system
+:> sudo dpkg -i package.deb
+
+*If the package didn't me the dependencies it required then gdebi can retrive them from the official repository
+:sudo apt-get install -y gdebi && sudo gdebi package.deb
+
+*To remove a package
+:sudo apt-get remove package
+or
+:sudo apt remove package
+
+* if you want to remove uneeded packaged
+:sudo apt-get autoremove
+
+*man 
+:man apt-get 
+>update the local package database and working with packages
+
+: man apt-cache
+>Querifying the local package database
+
+:man dpkg
+>working with individual packages and querifying the installed packages
+
+:man apt
+>Working with more concise user-friendly interfaces most basic operations

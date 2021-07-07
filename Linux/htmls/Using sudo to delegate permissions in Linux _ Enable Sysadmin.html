@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://www.redhat.com/sysadmin/using-sudo-delegate -->
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class=" js"><head class="at-element-marker"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/a03a21ae8a"></script><script src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/nr-1209.min.js.download"></script><script async="" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/icons.29.svg.js.download"></script><script id="dpal" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/dpal.js.download"></script><script src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/AppMeasurement.min.js.download" async=""></script><script src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/AppMeasurement_Module_ActivityMap.min.js.download" async=""></script><script src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/rh.mktg.js.download"></script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"a03a21ae8a",applicationID:"467345710"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){d("pageHide",[p.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1209.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<link rel="canonical" href="https://www.redhat.com/sysadmin/using-sudo-delegate">
+<meta property="og:site_name" content="Enable Sysadmin">
+<meta name="twitter:card" content="photo">
+<meta name="dcterms.title" content="Using sudo to delegate permissions in Linux">
+<meta name="twitter:title" content="Using sudo to delegate permissions in Linux">
+<meta name="dcterms.creator" content="David Both">
+<meta name="description" content="This article explores some legitimate use cases for the sudo command.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.redhat.com/sysadmin/using-sudo-delegate">
+<meta name="twitter:site:id" content="14627400">
+<meta property="og:title" content="Using sudo to delegate permissions in Linux">
+<meta name="twitter:creator" content="@LinuxGeek46">
+<meta name="dcterms.publisher" content="Red Hat, Inc.">
+<meta name="twitter:url" content="https://www.redhat.com/sysadmin/using-sudo-delegate">
+<meta name="twitter:image" content="https://www.redhat.com/sysadmin/sites/default/files/styles/full/public/2020-03/black-and-white-people-bar-men-4417%20Cropped.jpg?itok=lKR-FPem">
+<meta name="twitter:image:width" content="600">
+<meta name="twitter:image:height" content="1000">
+<meta name="twitter:image:alt" content="Red Hat, Inc.">
+<meta property="og:image" content="https://www.redhat.com/sysadmin/sites/default/files/styles/google_discover/public/2020-03/black-and-white-people-bar-men-4417%20Cropped.jpg?itok=ovYC9HrA">
+<meta property="og:image:secure_url" content="https://www.redhat.com/sysadmin/sites/default/files/styles/google_discover/public/2020-03/black-and-white-people-bar-men-4417%20Cropped.jpg?itok=ovYC9HrA">
+<meta name="dcterms.language" content="en">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:video:width" content="600">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="675">
+<meta property="og:image:alt" content="https://www.redhat.com/sysadmin/sites/default/files/styles/google_discover/public/2020-03/black-and-white-people-bar-men-4417%20Cropped.jpg?itok=ovYC9HrA">
+<meta property="og:updated_time" content="2020-04-20T09:00:00+0000">
+<meta property="og:street_address" content="100 East Davie Street">
+<meta property="og:locality" content="Raleigh">
+<meta property="og:region" content="NC">
+<meta property="og:postal_code" content="27601">
+<meta property="og:country_name" content="United States">
+<meta property="og:phone_number" content="+1 919 754 4950">
+<meta property="og:fax_number" content="+1 919 800 3804">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="https://www.redhat.com/sysadmin/users/david-both">
+<meta property="article:publisher" content="https://www.facebook.com/redhatinc">
+<meta property="article:section" content="Enable Sysadmin">
+<meta property="article:tag" content="Linux">
+<meta property="article:modified_time" content="2020-04-20T09:00:00+0000">
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "TechArticle",
+            "headline": "Using sudo to delegate permissions in Linux",
+            "name": "Using sudo to delegate permissions in Linux",
+            "about": "Linux",
+            "description": "This article explores some legitimate use cases for the sudo command.",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://www.redhat.com/sysadmin/sites/default/files/styles/full/public/2020-03/black-and-white-people-bar-men-4417%20Cropped.jpg?itok=lKR-FPem",
+                "width": "1000",
+                "height": "600"
+            },
+            "dateModified": "2020-04-20T09:00:00+0000",
+            "author": {
+                "@type": "Person",
+                "@id": "https://www.redhat.com/sysadmin/users/david-both",
+                "name": "David Both",
+                "url": "https://www.redhat.com/sysadmin/users/david-both",
+                "sameAs": "https://twitter.com/LinuxGeek46"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://www.redhat.com/"
+            },
+            "mainEntityOfPage": "https://www.redhat.com/sysadmin/using-sudo-delegate"
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.redhat.com/sysadmin/using-sudo-delegate",
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://www.redhat.com/"
+            }
+        },
+        {
+            "@type": "Person",
+            "name": "David Both",
+            "sameAs": "https://twitter.com/LinuxGeek46",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://www.redhat.com/sysadmin/sites/default/files/styles/user_picture_square/public/pictures/2019-05/david-crop.jpg?itok=imcvpdp0",
+                "width": "240",
+                "height": "240"
+            }
+        },
+        {
+            "@type": "Corporation",
+            "@id": "https://www.redhat.com/",
+            "name": "Red Hat, Inc.",
+            "url": "https://www.redhat.com/",
+            "sameAs": [
+                "https://en.wikipedia.org/wiki/Red_Hat",
+                "http://www.linkedin.com/company/red-hat",
+                "http://www.youtube.com/user/RedHatVideos",
+                "https://www.facebook.com/redhatinc",
+                "https://twitter.com/RedHat"
+            ],
+            "telephone": "+1 919 754 4950",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-888-RED-HAT1",
+                "availableLanguage": "English",
+                "contactType": "sales",
+                "faxnumber": "+1 919 800 3804"
+            },
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.redhat.com/sysadmin/themes/custom/sysadmin/assets/images/red-hat-logo.png",
+                "width": "254",
+                "height": "60"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "100 East Davie Street",
+                "addressLocality": "Raleigh",
+                "addressRegion": "NC",
+                "postalCode": "27601",
+                "addressCountry": "United States"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.redhat.com/sysadmin/",
+            "name": "Enable Sysadmin",
+            "url": "https://www.redhat.com/sysadmin/",
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://www.redhat.com/"
+            }
+        }
+    ]
+}</script>
+<meta name="robots" content="max-image-preview:large">
+<link rel="shortcut icon" href="https://www.redhat.com/sysadmin/themes/custom/sysadmin/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="revision" href="https://www.redhat.com/sysadmin/using-sudo-delegate">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.redhat.com/sysadmin/themes/custom/sysadmin/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.redhat.com/sysadmin/themes/custom/sysadmin/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.redhat.com/sysadmin/themes/custom/sysadmin/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://www.redhat.com/sysadmin/themes/custom/sysadmin/assets/favicon/site.webmanifest">
+<link rel="mask-icon" href="https://www.redhat.com/sysadmin/themes/custom/sysadmin/assets/favicon/safari-pinned-tab.svg" color="#ee0000">
+<meta name="msapplication-TileColor" content="#1a1a1a">
+<meta name="theme-color" content="#ffffff">
+<title>Using sudo to delegate permissions in Linux | Enable Sysadmin</title>
+<link rel="stylesheet" media="all" href="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/css_2Ew0_ikik0izh0qMFMR7w68r84J2tIix6ef-CYJmkec.css">
+<link rel="stylesheet" media="all" href="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/css_gGRMdr75XlcR9J0iJo8mIghgaz02dh2Sp6Oexln3n2g.css">
+
+
+<!--[if lte IE 8]>
+<script src="/sysadmin/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/js_QHqjxhGPGgZFwOfW92tmrVpssmC1sbO0zDG4TgLmaEI.js.download"></script>
+
+
+<script>bazadebezolkohpepadr="625851017"</script><script type="text/javascript" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/254db87b" defer=""></script><style type="text/css">.a2a_hide{display:none}.a2a_logo_color{background-color:#0166ff}.a2a_menu,.a2a_menu *{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;float:none;margin:0;padding:0;position:static;height:auto;width:auto}.a2a_menu{border-radius:6px;display:none;direction:ltr;background:#FFF;font:16px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;color:#000;line-height:12px;border:1px solid #CCC;vertical-align:baseline;overflow:hidden}.a2a_mini{min-width:200px;position:absolute;width:300px;z-index:9999997}.a2a_overlay{display:none;background:#616c7d;_height:expression( ((e=document.documentElement.clientHeight)?e:document.body.clientHeight)+"px" );_width:expression( ((e=document.documentElement.clientWidth)?e:document.body.clientWidth)+"px" );filter:alpha(opacity=90);opacity:.92;backdrop-filter:blur(8px);position:fixed;_position:absolute;top:0;right:0;left:0;bottom:0;z-index:9999998;-webkit-tap-highlight-color:rgba(0,0,0,0);transition:opacity .14s,backdrop-filter .14s}.a2a_full{background:#FFF;border:1px solid #FFF;height:auto;height:calc(320px);top:15%;_top:expression(40+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+"px");left:50%;margin-left:-320px;position:fixed;_position:absolute;text-align:center;width:640px;z-index:9999999;transition:transform .14s,opacity .14s}.a2a_full_footer,.a2a_full_header,.a2a_full_services{border:0;margin:0;padding:12px;box-sizing:border-box}.a2a_full_header{padding-bottom:8px}.a2a_full_services{height:280px;overflow-y:scroll;padding:0 12px;-webkit-overflow-scrolling:touch}.a2a_full_services .a2a_i{display:inline-block;float:none;width:181px;width:calc(33.334% - 18px)}div.a2a_full_footer{font-size:12px;text-align:center;padding:8px 14px}div.a2a_full_footer a,div.a2a_full_footer a:visited{display:inline;font-size:12px;line-height:14px;padding:8px 14px}div.a2a_full_footer a:focus,div.a2a_full_footer a:hover{background:0 0;border:0;color:#0166FF}div.a2a_full_footer a span.a2a_s_a2a,div.a2a_full_footer a span.a2a_w_a2a{background-size:14px;border-radius:3px;display:inline-block;height:14px;line-height:14px;margin:0 3px 0 0;vertical-align:top;*vertical-align:middle;width:14px}.a2a_modal{height:0;left:50%;margin-left:-320px;position:fixed;_position:absolute;text-align:center;top:15%;_top:expression(40+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+"px");width:640px;z-index:9999999;transition:transform .14s,opacity .14s;-webkit-tap-highlight-color:rgba(0,0,0,0)}.a2a_modal_body{background:0 0;border:0;font:24px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;position:relative;height:auto;width:auto}.a2a_thanks{color:#fff;height:auto;margin-top:20px;width:auto}.a2a_thanks>div:first-child{margin:0 0 40px 0}.a2a_thanks div *{height:inherit}#a2a_copy_link{background:#FFF;border:1px solid #FFF;margin-top:15%}span.a2a_s_link#a2a_copy_link_icon,span.a2a_w_link#a2a_copy_link_icon{background-size:48px;border-radius:0;display:inline-block;height:48px;left:0;line-height:48px;margin:0 3px 0 0;position:absolute;vertical-align:top;*vertical-align:middle;width:48px}#a2a_modal input#a2a_copy_link_text{background-color:transparent;_background-color:#FFF;border:0;color:#2A2A2A;font:inherit;height:48px;left:62px;max-width:initial;padding:0;position:relative;width:564px;width:calc(100% - 76px)}#a2a_copy_link_copied{background-color:#0166ff;color:#fff;display:none;font:inherit;font-size:16px;margin-top:1px;padding:3px 8px}@media (prefers-color-scheme:dark){.a2a_menu a,.a2a_menu a.a2a_i,.a2a_menu a.a2a_i:visited,.a2a_menu a.a2a_more,i.a2a_i{border-color:#2a2a2a!important;color:#fff!important}.a2a_menu a.a2a_i:active,.a2a_menu a.a2a_i:focus,.a2a_menu a.a2a_i:hover,.a2a_menu a.a2a_more:active,.a2a_menu a.a2a_more:focus,.a2a_menu a.a2a_more:hover,.a2a_menu_find_container{border-color:#444!important;background-color:#444!important}.a2a_menu{background-color:#2a2a2a;border-color:#2a2a2a}.a2a_menu_find{color:#fff!important}.a2a_menu span.a2a_s_find svg{background-color:transparent!important}.a2a_menu span.a2a_s_find svg path{fill:#fff!important}}@media print{.a2a_floating_style,.a2a_menu,.a2a_overlay{visibility:hidden}}@keyframes a2aFadeIn{from{opacity:0}to{opacity:1}}.a2a_starting{opacity:0}.a2a_starting.a2a_full,.a2a_starting.a2a_modal{transform:scale(.8)}@media (max-width:639px){.a2a_full{border-radius:0;top:15%;left:0;margin-left:auto;width:100%}.a2a_modal{left:0;margin-left:10px;width:calc(100% - 20px)}}@media (min-width:318px) and (max-width:437px){.a2a_full .a2a_full_services .a2a_i{width:calc(50% - 18px)}}@media (max-width:317px){.a2a_full .a2a_full_services .a2a_i{width:calc(100% - 18px)}}@media (max-height:436px){.a2a_full{bottom:40px;height:auto;top:40px}}@media (max-height:550px){.a2a_modal{top:30px}}@media (max-height:360px){.a2a_modal{top:20px}.a2a_thanks>div:first-child{margin-bottom:20px}}.a2a_menu a{color:#0166FF;text-decoration:none;font:16px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;line-height:14px;height:auto;width:auto;outline:0}.a2a_menu a.a2a_i:visited,.a2a_menu a.a2a_more{color:#0166FF}.a2a_menu a.a2a_i:active,.a2a_menu a.a2a_i:focus,.a2a_menu a.a2a_i:hover,.a2a_menu a.a2a_more:active,.a2a_menu a.a2a_more:focus,.a2a_menu a.a2a_more:hover{color:#2A2A2A;border-color:#EEE;border-style:solid;background-color:#EEE;text-decoration:none}.a2a_menu span.a2a_s_find{background-size:24px;height:24px;left:8px;position:absolute;top:7px;width:24px}.a2a_menu span.a2a_s_find svg{background-color:#FFF}.a2a_menu span.a2a_s_find svg path{fill:#CCC}#a2a_menu_container{display:inline-block}#a2a_menu_container{_display:inline}.a2a_menu_find_container{border:1px solid #CCC;border-radius:6px;padding:2px 24px 2px 0;position:relative;text-align:left}.a2a_cols_container .a2a_col1{overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch}#a2a_modal input,#a2a_modal input[type=text],.a2a_menu input,.a2a_menu input[type=text]{display:block;background-image:none;box-shadow:none;line-height:100%;margin:0;outline:0;overflow:hidden;padding:0;-moz-box-shadow:none;-webkit-box-shadow:none;-webkit-appearance:none}#a2apage_find_container input,#a2apage_find_container input[type=text]{background-color:transparent;_background-color:#FFF;border:0;box-sizing:content-box;color:#2A2A2A;font:inherit;font-size:16px;height:28px;line-height:20px;left:38px;outline:0;margin:0;max-width:initial;padding:2px 0;position:relative;width:99%}.a2a_clear{clear:both} .a2a_svg{background-repeat:no-repeat;display:block;overflow:hidden;height:32px;line-height:32px;padding:0;width:32px}.a2a_svg svg{background-repeat:no-repeat;background-position:50% 50%;border:none;display:block;left:0;margin:0 auto;overflow:hidden;padding:0;position:relative;top:0;width:auto;height:auto}a.a2a_i,i.a2a_i{display:block;float:left;border:1px solid #FFF;line-height:24px;padding:6px 8px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:132px}a.a2a_i span,a.a2a_more span{display:inline-block;overflow:hidden;vertical-align:top;*vertical-align:middle}a.a2a_i .a2a_svg{margin:0 6px 0 0}a.a2a_i .a2a_svg,a.a2a_more .a2a_svg{background-size:24px;height:24px;line-height:24px;width:24px}a.a2a_sss:hover{border-left:1px solid #CCC}a.a2a_menu_show_more_less{border-bottom:1px solid #FFF;border-left:0;border-right:0;line-height:24px;margin:6px 0 0;padding:6px;-webkit-touch-callout:none}a.a2a_menu_show_more_less span{display:inline-block;height:24px;margin:0 6px 0 0}.a2a_kit .a2a_svg{background-repeat:repeat}.a2a_default_style a{float:left;line-height:16px;padding:0 2px}.a2a_default_style a:hover .a2a_svg,.a2a_floating_style a:hover .a2a_svg,.a2a_overlay_style a:hover .a2a_svg svg{opacity:.7}.a2a_overlay_style.a2a_default_style a:hover .a2a_svg{opacity:1}.a2a_default_style .a2a_count,.a2a_default_style .a2a_svg,.a2a_floating_style .a2a_svg,.a2a_menu .a2a_svg,.a2a_vertical_style .a2a_count,.a2a_vertical_style .a2a_svg{border-radius:4px}.a2a_default_style .a2a_counter img,.a2a_default_style .a2a_dd,.a2a_default_style .a2a_svg{float:left}.a2a_default_style .a2a_img_text{margin-right:4px}.a2a_default_style .a2a_divider{border-left:1px solid #000;display:inline;float:left;height:16px;line-height:16px;margin:0 5px}.a2a_kit a{cursor:pointer}.a2a_floating_style{background-color:#fff;border-radius:6px;position:fixed;z-index:9999995}.a2a_overlay_style{z-index:2147483647}.a2a_floating_style,.a2a_overlay_style{animation:a2aFadeIn .2s ease-in;padding:4px}.a2a_vertical_style a{clear:left;display:block;overflow:hidden;padding:4px;text-decoration:none}.a2a_floating_style.a2a_default_style{bottom:0}.a2a_floating_style.a2a_default_style a,.a2a_overlay_style.a2a_default_style a{padding:4px}.a2a_count{background-color:#fff;border:1px solid #ccc;box-sizing:border-box;color:#2a2a2a;display:block;float:left;font:12px Arial,Helvetica,sans-serif;height:16px;margin-left:4px;position:relative;text-align:center;width:50px}.a2a_count:after,.a2a_count:before{border:solid transparent;border-width:4px 4px 4px 0;content:"";height:0;left:0;line-height:0;margin:-4px 0 0 -4px;position:absolute;top:50%;width:0}.a2a_count:before{border-right-color:#ccc}.a2a_count:after{border-right-color:#fff;margin-left:-3px}.a2a_count span{animation:a2aFadeIn .14s ease-in}.a2a_vertical_style .a2a_counter img{display:block}.a2a_vertical_style .a2a_count{float:none;margin-left:0;margin-top:6px}.a2a_vertical_style .a2a_count:after,.a2a_vertical_style .a2a_count:before{border:solid transparent;border-width:0 4px 4px 4px;content:"";height:0;left:50%;line-height:0;margin:-4px 0 0 -4px;position:absolute;top:0;width:0}.a2a_vertical_style .a2a_count:before{border-bottom-color:#ccc}.a2a_vertical_style .a2a_count:after{border-bottom-color:#fff;margin-top:-3px}.a2a_nowrap{white-space:nowrap}.a2a_note{margin:0 auto;padding:9px;font-size:12px;text-align:center}.a2a_note .a2a_note_note{margin:0;color:#2A2A2A}.a2a_wide a{display:block;margin-top:3px;border-top:1px solid #EEE;text-align:center}.a2a_label{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:polygon(0 0,0 0,0 0);-webkit-clip-path:polygon(0 0,0 0,0 0);overflow:hidden;height:1px;width:1px}.a2a_kit,.a2a_menu,.a2a_modal,.a2a_overlay{-ms-touch-action:manipulation;touch-action:manipulation;outline:0}.a2a_dd img{border:0}.a2a_button_facebook_like iframe{max-width:none}</style><script src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/RC29710b46d3c141f8b0be1673eb9ff7d4-source.min.js.download" async=""></script><script src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/RC3e95ba0bbf1e4d87872450330ed4d390-source.min.js.download" async=""></script><script src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/RC005ba82c218444d496ca7f2cb3acc730-source.min.js.download" async=""></script><script async="" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/hotjar-1712492.js.download"></script><script>
+(function() {
+    let link=document.createElement("link");link.setAttribute("rel","stylesheet"),link.type="text/css",link.href="https://www.redhat.com/ux/webdms/css/at.min.css",document.head.appendChild(link);const runPoll=(e,t={})=>new Promise((n,r)=>{let l=0;if("function"!=typeof e&&"object"!=typeof e)r(new Error(`invalid first parameter. expected type: 'function' or 'object' but found type: ${typeof e}`));else if("function"==typeof e&&"object"!=typeof t)r(new Error(`invalid second parameter. expected type: 'object' but found type: ${typeof t}`));else{let o=null,c=null;"function"==typeof e?(o=e,c=t):"object"==typeof e&&(c=e);const{pollLimit:i=100,duration:a=50,elements:u=[]}=c,s=()=>{let e=!0;return u.forEach(t=>{0===document.querySelectorAll(t).length&&(e=!1)}),e},f=()=>{let e=!1;return e="function"==typeof o?o()&&s():s()},d=()=>{if(l<i)if(l+=1,f()){let e=null;u.length>0&&(e=[],u.forEach(t=>{1===document.querySelectorAll(t).length?e.push(document.querySelector(t)):e.push(document.querySelectorAll(t))})),n(e)}else setTimeout(()=>{d()},a);else r(new Error("poll timed out"))};d()}}),atTrack=(e,t)=>new Promise((n,r)=>{runPoll(()=>"object"==typeof s&&"function"==typeof s.tl).then(()=>{const r=setTimeout(()=>{throw new Error("Analytics event not captured")},t||2e3);s.tl(this,"o",e,null,()=>{clearTimeout(r),n()})}).catch(r)}),atTrackBind=e=>{e.parentNode.querySelectorAll("[data-at-track]").forEach((e,t)=>{const n=e.getAttribute("data-at-track");e.addEventListener("click",t=>{let r=null;"A"===e.tagName&&(t.preventDefault(),r=e.href),atTrack(n).catch(()=>{}).finally(()=>{r&&(window.location.href=r)})}),e.removeAttribute("data-at-track")})},inject=(e,t,n)=>{let r=null;return runPoll(()=>(r=document.querySelectorAll(e)).length).then(()=>{if("replace"==n){r[0].insertAdjacentHTML("afterend",t);const e=r[0].nextSibling;r[0].remove(),r=[e]}else if("replaceInner"==n)r[0].innerHTML=t;else if("append"==n)r[0].insertAdjacentHTML("beforeend",t);else if("prepend"==n)r[0].insertAdjacentHTML("afterbegin",t);else if("insertAfter"==n)r[0].insertAdjacentHTML("afterend",t);else{if("insertBefore"!=n)throw"invalid placement argument";r[0].insertAdjacentHTML("beforebegin",t)}}).then(()=>{atTrackBind(r[0])}).catch(e=>{throw e})};
+
+    const styles = document.createElement('style');
+    const css = '';
+
+    styles.innerHTML = css;
+    document.head.appendChild(styles);
+
+
+        runPoll({
+            elements: ['footer a[href$="/about/japan-buy"]']
+        }).then((elements) => {
+            elements[0].closest('li').style.display = "none";
+        }).catch((err) => {
+        });
+
+})();
+</script><link rel="stylesheet" type="text/css" href="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/at.min.css"><style></style><script src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/RC998e066cced84f7bab0826f50900712c-source.min.js.download" async=""></script><script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script><script async="" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/modules.c057a0a680ba2bae7796.js.download" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/RC25451e58f9074e3a8bafa027043e6681-source.min.js.download" async=""></script><script type="text/javascript" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/elqCfg.min.js.download"></script><script type="text/javascript" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/svrGP"></script></head>
+<body data-new-gr-c-s-check-loaded="14.1020.0" data-gr-ext-installed="">
+<a href="https://www.redhat.com/sysadmin/using-sudo-delegate#main-content" class="visually-hidden focusable">
+Skip to main content
+</a>
+
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+    
+
+<div class="redhat-cookie-banner">
+<section id="redhat-cookie-privacy-banner" class="redhat-cookie-banner-wrapper" style="display: block;">
+  <div class="container my-3 pr-5">
+    <p>We use cookies on our websites to deliver our online services. Details about how we use cookies and how you may disable them are set out in our <a href="http://www.redhat.com/en/about/privacy-policy#cookies">Privacy Statement</a>. By using this website you agree to our use of cookies.
+    <span class="cookie-more">
+    <a id="redhat-cookie-privacy-banner-close" href="javascript:void(0);" class="cookie-close">×</a>
+    </span>
+    </p>
+  </div>
+</section>
+</div>
+
+<div class="page d-flex flex-column">
+  <div class="navbar navbar-expand-lg justify-content-between navbar-dark bg-dark">
+    <div class="container">
+                
+  <div class="block block--sysadmin-navbar-branding">
+
+  
+    
+
+    
+  <a href="https://www.redhat.com/" class="navbar-brand ">
+            <img src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/logo.svg" width="135" height="31" class="d-inline-block align-top" alt="Red Hat logo">
+
+        
+  </a>
+
+
+  </div>
+
+
+      
+      <div class="navbar-toggler-wrapper">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-parent="#collapse-parent" data-target="#search-collapse" aria-controls="search-collapse" aria-expanded="false" aria-label="Toggle search">
+          <svg class="icon-collapsed" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><line x1="18.95" y1="19.15" x2="25.25" y2="25.75"></line><circle cx="13.25" cy="12.75" r="8.5"></circle></svg>
+          <svg class="icon-expanded" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><line x1="7.25" y1="7.25" x2="22.75" y2="22.75"></line><line x1="7.25" y1="22.75" x2="22.75" y2="7.25"></line></svg>
+          <span style="vertical-align: middle;">Search</span>
+        </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-parent="#collapse-parent" data-target="#mobilenav-collapse" aria-controls="mobilenav-collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <svg class="icon-collapsed" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h22M4 15h22M4 23h22"></path></svg>
+          <svg class="icon-expanded" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><line x1="7.25" y1="7.25" x2="22.75" y2="22.75"></line><line x1="7.25" y1="22.75" x2="22.75" y2="7.25"></line></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="collapse-parent">
+    <div id="search-collapse" class="search-collapse collapse" data-parent="#collapse-parent">
+      <div class="py-4 px-3">
+        <form class="form-inline m-2" action="https://www.redhat.com/sysadmin/search/node" accept-charset="UTF-8" method="get">
+          <div class="input-group flex-fill">
+            <input class="form-control" type="search" name="keys" id="search" value="" placeholder="Search this site…" aria-label="Search this site…">
+            <div class="input-group-append">
+              <button class="btn btn-secondary font-weight-bold" type="submit">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="mobilenav-collapse" class="mobilenav-collapse d-lg-none collapse" data-parent="#collapse-parent">
+                
+  <div class="block block--sysadmin-navbar-sitename sitename">
+
+  
+    
+
+    
+  <a href="https://www.redhat.com/sysadmin/" class="navbar-brand sitename">
+        Enable Sysadmin
+  </a>
+
+  <span class="d-none d-lg-inline ml-1 mr-3 h5 navbar-sitename-divider">&nbsp;</span>
+
+  </div>
+
+  <div class="block block--sysadmin-main-menu">
+
+  
+    
+
+      
+  
+
+
+  <ul class="nav navbar-nav">
+                                          <li class="nav-item  dropdown">
+                      <a href="https://www.redhat.com/sysadmin/" class="nav-link dropdown-toggle" data-toggle="dropdown" data-drupal-link-system-path="&lt;front&gt;">Articles</a>
+                          <div class="dropdown-menu">
+              <a href="https://www.redhat.com/sysadmin/topics/automation" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/146">Automation</a>
+              <a href="https://www.redhat.com/sysadmin/topics/career" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/51">Career</a>
+              <a href="https://www.redhat.com/sysadmin/topics/containers" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/36"> Containers</a>
+              <a href="https://www.redhat.com/sysadmin/topics/sysadmin-culture" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/41">Culture</a>
+              <a href="https://www.redhat.com/sysadmin/topics/kubernetes" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/66">Kubernetes</a>
+              <a href="https://www.redhat.com/sysadmin/topics/linux" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/21">Linux</a>
+              <a href="https://www.redhat.com/sysadmin/topics/programming" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/71"> Programming</a>
+              <a href="https://www.redhat.com/sysadmin/topics/security" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/96">Security</a>
+  </div>
+                              </li>
+                                      <li class="nav-item  dropdown">
+                      <a href="https://www.redhat.com/sysadmin/about" class="nav-link dropdown-toggle" data-toggle="dropdown" data-drupal-link-system-path="node/71">About</a>
+                          <div class="dropdown-menu">
+              <a href="https://www.redhat.com/sysadmin/about" class="dropdown-item" data-drupal-link-system-path="node/71">Topics</a>
+              <a href="https://www.redhat.com/sysadmin/email" class="dropdown-item" data-drupal-link-system-path="node/376">Email newsletter</a>
+              <a href="https://www.redhat.com/sysadmin/join-community" class="dropdown-item" data-drupal-link-system-path="node/641">Join the community</a>
+              <a href="https://www.redhat.com/sysadmin/community-guidelines" class="dropdown-item" data-drupal-link-system-path="node/156">Community guidelines</a>
+              <a href="https://www.redhat.com/sysadmin/sudoers-program" class="dropdown-item" data-drupal-link-system-path="node/2106">Sudoers program</a>
+              <a href="https://www.redhat.com/sysadmin/meet-team" class="dropdown-item" data-drupal-link-system-path="node/2316">Meet the team</a>
+              <a href="https://www.redhat.com/sysadmin/faq" class="dropdown-item" data-drupal-link-system-path="node/1526">FAQs</a>
+  </div>
+                              </li>
+                                      <li class="nav-item  ">
+                      <a href="https://www.redhat.com/sysadmin/welcome-enable-sysadmin" title="A Red Hat community publication for sysadmins, by sysadmins" class="nav-link">Welcome</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+
+      
+              
+          </div>
+  </div>
+
+  
+
+
+<nav class="navbar navbar-expand-lg justify-content-between navbar-light  d-none d-lg-block text-dark bg-light border-bottom-light-gray">
+      <div class="container">
+  
+      
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse">
+                  <div class="mr-auto d-flex navbar-desktop">
+            
+  <div class="block block--sysadmin-navbar-sitename sitename">
+
+  
+    
+
+    
+  <a href="https://www.redhat.com/sysadmin/" class="navbar-brand sitename">
+        Enable Sysadmin
+  </a>
+
+  <span class="d-none d-lg-inline ml-1 mr-3 h5 navbar-sitename-divider">&nbsp;</span>
+
+  </div>
+
+  <div class="block block--sysadmin-main-menu">
+
+  
+    
+
+      
+  
+
+
+  <ul class="nav navbar-nav">
+                                          <li class="nav-item  dropdown">
+                      <a href="https://www.redhat.com/sysadmin/" class="nav-link dropdown-toggle" data-toggle="dropdown" data-drupal-link-system-path="&lt;front&gt;">Articles</a>
+                          <div class="dropdown-menu">
+              <a href="https://www.redhat.com/sysadmin/topics/automation" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/146">Automation</a>
+              <a href="https://www.redhat.com/sysadmin/topics/career" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/51">Career</a>
+              <a href="https://www.redhat.com/sysadmin/topics/containers" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/36"> Containers</a>
+              <a href="https://www.redhat.com/sysadmin/topics/sysadmin-culture" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/41">Culture</a>
+              <a href="https://www.redhat.com/sysadmin/topics/kubernetes" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/66">Kubernetes</a>
+              <a href="https://www.redhat.com/sysadmin/topics/linux" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/21">Linux</a>
+              <a href="https://www.redhat.com/sysadmin/topics/programming" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/71"> Programming</a>
+              <a href="https://www.redhat.com/sysadmin/topics/security" class="dropdown-item" data-drupal-link-system-path="taxonomy/term/96">Security</a>
+  </div>
+                              </li>
+                                      <li class="nav-item  dropdown">
+                      <a href="https://www.redhat.com/sysadmin/about" class="nav-link dropdown-toggle" data-toggle="dropdown" data-drupal-link-system-path="node/71">About</a>
+                          <div class="dropdown-menu">
+              <a href="https://www.redhat.com/sysadmin/about" class="dropdown-item" data-drupal-link-system-path="node/71">Topics</a>
+              <a href="https://www.redhat.com/sysadmin/email" class="dropdown-item" data-drupal-link-system-path="node/376">Email newsletter</a>
+              <a href="https://www.redhat.com/sysadmin/join-community" class="dropdown-item" data-drupal-link-system-path="node/641">Join the community</a>
+              <a href="https://www.redhat.com/sysadmin/community-guidelines" class="dropdown-item" data-drupal-link-system-path="node/156">Community guidelines</a>
+              <a href="https://www.redhat.com/sysadmin/sudoers-program" class="dropdown-item" data-drupal-link-system-path="node/2106">Sudoers program</a>
+              <a href="https://www.redhat.com/sysadmin/meet-team" class="dropdown-item" data-drupal-link-system-path="node/2316">Meet the team</a>
+              <a href="https://www.redhat.com/sysadmin/faq" class="dropdown-item" data-drupal-link-system-path="node/1526">FAQs</a>
+  </div>
+                              </li>
+                                      <li class="nav-item  ">
+                      <a href="https://www.redhat.com/sysadmin/welcome-enable-sysadmin" title="A Red Hat community publication for sysadmins, by sysadmins" class="nav-link">Welcome</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+
+        </div>
+          
+                  
+      
+      
+
+<div class="dropdown show text-align-right">
+    <a href="https://www.redhat.com/sysadmin/subscribe" class="navbar-util navbar-util--rss" aria-label="Subscribe to our feed or newsletter blast">
+    <svg width="22" height="23" viewBox="0 0 22 23" xmlns="http://www.w3.org/2000/svg"><title>Subscribe to our RSS feed or Email newsletter</title><path d="M0 4.23c9.79 0 17.75 8 17.75 17.84h4.23A22.05 22.05 0 0 0 0 0v4.23z M0 7.67v4.23c2.74 0 5.33 1.07 7.27 3.03a10.26 10.26 0 0 1 3 7.3h4.24c0-8.02-6.5-14.56-14.51-14.56M2.93 16.87a2.94 2.94 0 0 0 0 5.85 2.93 2.93 0 1 0 0-5.85" fill-rule="evenodd"></path></svg>
+
+    <span class="sr-only">Subscribe to our RSS feed or Email newsletter.</span>
+  </a>
+
+    <a id="dropdownSearchLink" href="https://www.redhat.com/sysadmin/search/node" class="navbar-util navbar-util--search" role="button" aria-label="Search this site…" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" style="fill:none;stroke-width:3;stroke:#000;stroke-linecap:round;"><line x1="18.95" y1="19.15" x2="25.25" y2="25.75"></line><circle cx="13.25" cy="12.75" r="8.5"></circle></svg>
+
+  </a>
+  <div class="dropdown-menu dropdown-menu-right p-1 pt-2" aria-labelledby="dropdownSearchLink">
+    <form class="form-inline m-2" action="https://www.redhat.com/sysadmin/search/node" accept-charset="UTF-8" method="get">
+      <div class="input-group flex-fill">
+        <input class="form-control" type="search" name="keys" id="search" value="" placeholder="Search this site…" aria-label="Search this site…">
+        <div class="input-group-append">
+          <button class="btn btn-secondary font-weight-bold" type="submit">GO</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  </div>
+      </div>
+
+      </div>
+  </nav>
+
+  <main class="pb-5">
+                  <header class="page__header">
+          <div class="container">
+              <div data-drupal-messages-fallback="" class="hidden"></div>
+
+
+          </div>
+        </header>
+          
+    <a name="main-content" tabindex="-1"></a>
+
+                  <div class="page__content">
+                  
+  <div class="block block--sysadmin-content">
+
+  
+    
+
+      <article data-history-node-id="2041" role="article" about="/sysadmin/using-sudo-delegate" typeof="schema:Article" id="node--article--2041" class="full full--article node node--promoted">
+  
+    <span property="schema:name" content="Using sudo to delegate permissions in Linux" class="hidden"></span>
+  <span property="schema:interactionCount" content="UserComments:0" class="hidden"></span>
+
+
+      <div class="section my-5 narrow">
+  <div class="container">
+    <div>
+      
+  <div class="block">
+
+  
+    
+
+      <span property="schema:name"><h1 class="font-weight-bold">Using sudo to delegate permissions in Linux</h1>
+</span>
+
+  
+  </div>
+
+  <div class="block">
+
+  
+    
+
+      
+            <div class="article__field-subhead">This article explores some legitimate use cases for the sudo command.</div>
+      
+  
+  </div>
+
+    </div>
+  </div>
+</div>
+<div class="section pb-5 narrow">
+  <div class="container">
+    <div>
+      
+  <div class="block">
+
+  
+    
+
+      <p class="article-byline">
+  <span class="article-date">
+    <span class="label">Posted:</span>
+    April 20, 2020
+  </span>
+    <span aria-hidden="true">|</span>
+  <span class="article-authors">
+    <strong class="sr-only">by</strong>
+          <a href="https://www.redhat.com/sysadmin/users/david-both" class="article-author article-author--primary">David Both<span class="author-affiliate"> (Sudoer)</span></a>      </span>
+  </p>
+
+  
+  </div>
+
+  <div class="block">
+
+  
+    
+
+      
+            <div class="article__field-media"><figure>
+  
+  
+  <div class="blazy image__field-media-image blazy--on" data-blazy="">
+    <div class="field__label font-weight-bold visually-hidden">
+      Image    </div>
+                  <div class="field__item">
+
+
+
+                    <div class="media media--blazy  media--image">
+      
+<img class="b-lazy media__image media__element img-fluid b-loaded" height="600" width="1000" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/black-and-white-people-bar-men-4417 Cropped.jpg" typeof="foaf:Image" loading="lazy" alt="Using sudo to delegate">
+
+        
+      
+    </div>
+        
+  
+</div>
+              </div>
+
+  <figcaption>
+    
+            <div class="image__field-media-description"><p>Photo by&nbsp;<strong><a href="https://www.pexels.com/@gratisography?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Gratisography</a></strong>&nbsp;from&nbsp;<strong><a href="https://www.pexels.com/photo/black-and-white-people-bar-men-4417/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></p>
+</div>
+      
+  </figcaption>
+</figure>
+</div>
+      
+  
+  </div>
+
+  <div class="block">
+
+  
+    
+
+      
+            <div property="schema:text" class="clearfix article__body"><p>In my previous article, “<a href="https://redhat.com/sysadmin/sysadmins-dont-sudo">Real sysadmins don’t sudo</a>,” I discussed the really horrible misuse of <code>sudo</code> by some distributions. In this article, which is partially excerpted from Chapter 11 of my book, “Using and Administering Linux, Zero to SysAdmin, Volume 1: Getting started,” I explore a couple of valid use cases for <code>sudo</code>.</p>
+
+<p class="h2">Use case 1: Remote file copy</p>
+
+<p>I recently wrote a short Bash program to copy some MP3 files from a USB thumb drive on one network host to another network host. The files are copied to a specific directory on the server that I run for an organization to which I belong, from where they can be downloaded and played.</p>
+
+<div data-embed-button="resource_list" data-entity-embed-display="view_mode:resource_list.link" data-entity-type="resource_list" data-entity-uuid="60b26066-acd0-4332-afa7-d98c9a079f02" data-langcode="en" class="align-right embedded-entity embedded-entity--resources embedded-entity--resources--link"><aside id="resource-list-more-linux-resources" class="eck-entity mt-2 py-3 pr-3 border-top border-danger"><h2 class="h4">
+      More Linux resources
+  </h2>
+
+<ul class="pl-3 mb-0"><li class="my-2"><a href="https://developers.redhat.com/cheat-sheets/advanced-linux-commands/?intcmp=701f20000012ngPAAQ">Advanced Linux Commands Cheat Sheet for Developers</a></li>
+      <li class="my-2"><a href="https://access.redhat.com/products/red-hat-insights/?intcmp=701f20000012ngPAAQ">Get Started with Red Hat Insights</a></li>
+      <li class="my-2"><a href="https://developers.redhat.com/cheat-sheets/linux-commands-cheat-sheet/?intcmp=701f20000012ngPAAQ">Download Now: Basic Linux Commands Cheat Sheet</a></li>
+      <li class="my-2"><a href="https://rhtapps.redhat.com/assessment/?intcmp=701f20000012ngPAAQ">Linux System Administration Skills Assessment</a></li>
+  </ul></aside></div>
+<p>My program does a few other things, like changing the name of the files before they are copied so that they are automatically sorted by date on the web page. It also deletes all of the files on the USB drive after verifying that the transfer has taken place correctly. This nice little program has a few options such as <code>-h</code> to display help, <code>-t</code> for test mode and a couple of others.</p>
+
+<p>My program, wonderful as it is, needs to run as root in order to perform its primary functions. Unfortunately, this organization has only a couple of people besides myself who have any interest in administering our audio and computer systems, which puts me in the position of finding semi-technical people to train to login to the computer we use to perform the transfer and run this little program.</p>
+
+<p>It is not that I cannot run the program myself, but I am not always there for various reasons such as travel and illness. Even when I am present, as the “Lazy SysAdmin,” I like to have others do my work for me. So I write scripts to automate those tasks and use <code>sudo</code> to anoint a couple of users to run the scripts. Many Linux commands require the user to be root in order to run. This protects the system against accidental damage such as that caused by my own stupidity and intentional damage by a user with malicious intent.</p>
+
+<p class="h2">Do do that sudo that you do so well</p>
+
+<p>The <code>sudo</code> program is a handy tool that allows me as a sysadmin with root access to delegate responsibility for all or a few administrative tasks to other users of the computer as I see fit. It allows me to perform that delegation without compromising the root password and thus maintain a high level of security on the host.</p>
+
+<p>Let’s assume, for example, that I have given regular user, “ruser,” access to my Bash program, <code>myprog</code>, which must be run as root in order to perform part of its functions. First, the user logs in as ruser with their own password. The user then uses the following command to run <code>myprog</code>.</p>
+
+<pre><code class="language-shell hljs">sudo myprog</code></pre>
+
+<p>The <code>sudo</code> program checks the <code>/etc/sudoers</code> file and verifies that ruser is permitted to run <code>myprog</code>. If so, <code>sudo</code> requests that the user enter their own password – not the root password. After ruser enters their own password, the program is run. <code>sudo</code> also logs the facts of the access to <code>myprog</code> with the date and time the program was run, the complete command, and the user who ran it. This data is logged in <code>/var/log/security</code>.</p>
+
+<p>I find that having the log of each command run by <code>sudo</code> to be helpful in training. I can see who did what and whether they actually entered the command correctly.</p>
+
+<p>I have done this to delegate authority to run a single program to myself and one other user. However,&nbsp;<code>sudo</code> can be used to do so much more. It can allow the sysadmin to delegate authority for managing network functions or specific services to a single person or to a group of trusted users. It allows these functions to be delegated while protecting the security of the root password.</p>
+
+<p class="h2">Configuring the sudoers file</p>
+
+<p>As a sysadmin, I can use the <code>/etc/sudoers</code> file to allow users or groups of users access to a single command, defined groups of commands, or all commands. This flexibility is key to both the power and the simplicity of using <code>sudo</code> for delegation.</p>
+
+<p>I have copied the entire <code>sudoers</code> file in <strong>Figure 1</strong> from the host on which I am using it in order to deconstruct it for you. I found it very confusing the first time I encountered it. Hopefully, it won’t be quite so obscure for you by the time we get through. I do like that Red Hat-based distributions tend to have default configuration files with lots of comments and examples to provide guidance. This does make things easier as much less Googling is necessary.</p>
+
+<p>Do not use your standard editor to modify the <code>sudoers</code> file. Use the <code>visudo</code> command because it is designed to enable any changes as soon as the file is saved and you exit from the editor. It is possible to use editors besides <code>vi</code> in the same way as <code>visudo</code>.</p>
+
+<p>Let’s start analyzing this file at the beginning with a couple of types of aliases.</p>
+
+<p><strong>Host aliases</strong></p>
+
+<p>The Host Aliases section is used to create groups of hosts on which commands or command aliases can be used to provide access. The basic idea is that this single file will be maintained for all hosts in an organization and copied to <code>/etc</code> on&nbsp;each host. Some hosts, such as servers can thus be configured as a group to allow some users access to specific commands such as the ability to start and stop services like HTTPD, DNS, networking, the ability to mount filesystems, and so on.<br>
+IP addresses can be used instead of hostnames in the host aliases.</p>
+
+<pre><code class="language-plaintext hljs">## Sudoers allows particular users to run various commands as
+## the root user, without needing the root password.
+##
+## Examples are provided at the bottom of the file for collections
+## of related commands, which can then be delegated out to particular
+## users or groups.
+##
+## This file must be edited with the 'visudo' command.
+
+## Host Aliases
+## Groups of machines. You may prefer to use hostnames (perhaps using
+## wildcards for entire domains) or IP addresses instead.
+# Host_Alias FILESERVERS = fs1, fs2
+# Host_Alias MAILSERVERS = smtp, smtp2
+
+## User Aliases
+## These aren't often necessary, as you can use regular groups
+## (ie, from files, LDAP, NIS, etc) in this file - just use %groupname
+## rather than USERALIAS
+# User_Alias ADMINS = jsmith, mikem
+<b>User_Alias AUDIO = dboth, user</b>
+
+## Command Aliases
+## These are groups of related commands...
+
+## Networking
+# Cmnd_Alias NETWORKING = /sbin/route, /sbin/ifconfig, /bin/ping, /sbin/dhclient, /usr/bin/net, /sbin/iptables, /usr/bin/rfcomm, /usr/bin/wvdial, /sbin/iwconfig, /sbin/mii-tool
+
+## Installation and management of software
+# Cmnd_Alias SOFTWARE = /bin/rpm, /usr/bin/up2date, /usr/bin/yum
+
+## Services
+# Cmnd_Alias SERVICES = /sbin/service, /sbin/chkconfig
+
+## Updating the locate database
+# Cmnd_Alias LOCATE = /usr/bin/updatedb
+
+## Storage
+# Cmnd_Alias STORAGE = /sbin/fdisk, /sbin/sfdisk, /sbin/parted, /sbin/partprobe, /bin/mount, /bin/umount
+
+## Delegating permissions
+# Cmnd_Alias DELEGATING = /usr/sbin/visudo, /bin/chown, /bin/chmod, /bin/chgrp
+ 
+## Processes
+# Cmnd_Alias PROCESSES = /bin/nice, /bin/kill, /usr/bin/kill, /usr/bin/killall
+
+## Drivers
+# Cmnd_Alias DRIVERS = /sbin/modprobe
+
+# Defaults specification
+#
+# Refuse to run if unable to disable echo on the tty.
+#
+Defaults !visiblepw
+Defaults env_reset
+Defaults env_keep =  "COLORS DISPLAY HOSTNAME HISTSIZE KDEDIR LS_COLORS"
+Defaults env_keep += "MAIL PS1 PS2 QTDIR USERNAME LANG LC_ADDRESS LC_CTYPE"
+Defaults env_keep += "LC_COLLATE LC_IDENTIFICATION LC_MEASUREMENT LC_MESSAGES"
+Defaults env_keep += "LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER LC_TELEPHONE"
+Defaults env_keep += "LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY"
+Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+
+## Next comes the main part: which users can run what software on
+## which machines (the sudoers file can be shared between multiple
+## systems).
+## Syntax:
+##
+## user MACHINE=COMMANDS
+##
+## The COMMANDS section may have other options added to it.
+##
+## Allow root to run any commands anywhere
+root ALL=(ALL) ALL
+
+## Allows members of the 'sys' group to run networking, software,
+## service management apps and more.
+# %sys ALL = NETWORKING, SOFTWARE, SERVICES, STORAGE, DELEGATING, PROCESSES, LOCATE, DRIVERS
+
+## Allows people in group wheel to run all commands
+%wheel  ALL=(ALL) ALL
+
+## Same thing without a password
+# %wheel ALL=(ALL) NOPASSWD: ALL
+
+## Allows members of the users group to mount and unmount the
+## cdrom as root
+# %users ALL=/sbin/mount /mnt/cdrom, /sbin/umount /mnt/cdrom
+
+## Allows members of the users group to shutdown this system
+# %users  localhost=/sbin/shutdown -h now
+
+## Read drop-in files from /etc/sudoers.d (the # here does not mean a comment)
+#includedir /etc/sudoers.d
+
+<b>################################################################################
+# Added by David Both, 11/04/2017 to provide limited access to myprog #
+################################################################################
+#
+AUDIO guest1=/usr/local/bin/myprog</b></code></pre>
+
+<p><strong>Figure 1</strong>: A default sudoers file with my modifications in bold.</p>
+
+<p><strong>User aliases</strong></p>
+
+<p>The next group of configuration samples is user aliases. This allows root to sort users into aliased groups so that an entire group can be provided access to certain root capabilities. For the little program I wrote, I added the following alias to this section which defines the alias <code>AUDIO</code> and assigns two users to that alias.</p>
+
+<pre><code class="language-plaintext hljs">User_Alias AUDIO = dboth, ruser</code></pre>
+
+<p>It is possible, as stated in the <code>sudoers</code> file itself, to simply use Linux groups defined in the <code>/etc/groups</code> file instead of aliases. If you already have a group defined there that meets your needs, such as “audio”, use that group name preceded by a <code>%</code> sign like so: <code>%audio</code> when assigning commands available to groups later in the <code>sudoers</code> file.</p>
+
+<p><strong>Command aliases</strong></p>
+
+<p>Further down the <code>sudoers</code> file is a section with command aliases. These aliases are lists of related commands such as networking commands or commands required to install updates or new RPM packages. These aliases allow the sysadmin to easily allow access to groups of commands.</p>
+
+<p>There are a number of aliases already set up in this section that make it easy to delegate access to specific types of commands. We don’t need any of them for our use case.</p>
+
+<p><strong>Environment defaults</strong></p>
+
+<p>The next section sets up some default environment variables. The item that is most interesting in this section is the <code>!visiblepw</code> line which prevents <code>sudo</code> from running if the user environment is set to show the password. This is a security precaution that should not be overridden.</p>
+
+<p><strong>Command section</strong></p>
+
+<p>This section is the main part of the <code>sudoers</code> file. Everything necessary can be done without all of the aliases by adding enough entries here. The aliases just make it a whole lot easier by using the aliases already defined to tell <code>sudo</code> who can do what on which hosts. The examples are self-explanatory once you understand the syntax in this section. So let’s look at the syntax that we find in the command section. In <strong>Figure 2</strong> we have a generic entry for our user, ruser.</p>
+
+<pre><code class="language-plaintext hljs">ruser ALL=(ALL) ALL</code></pre>
+
+<p><strong>Figure 2</strong>: A generic entry that says that ruser can run any program on any host as any user.</p>
+
+<p>The first ALL in the line indicates that this rule applies to all hosts. The second ALL allows ruser to run commands as any other user. By default, commands are run as root user but ruser can specify on the <code>sudo</code> command line that a program is run as any other user. The last ALL means that ruser can run all commands without restriction. This entry would make ruser effectively into root. We won’t be using this entry because we do not want this user to have all of those capabilities.</p>
+
+<p>Note that there is an entry for root as shown in <strong>Figure 3</strong>. This entry allows root to have all-encompassing access to all commands on all hosts.</p>
+
+<pre><code class="language-plaintext hljs">root ALL=(ALL) ALL</code></pre>
+
+<p><strong>Figure 3</strong>: An entry that says that toot can run any program on any host as any user.<br>
+But, of course, I had to try this out so I commented out the line in <strong>Figure 3</strong> and, as root, tried to run <code>chown</code> without <code>sudo</code>. That did work – much to my surprise. Then I used <code>sudo chown</code> and that failed with the message, “root is not in the sudoers file. This incident will be reported.” This means that root can run everything as root, but nothing when using the <code>sudo</code> command. This would prevent root from running commands as other users via the <code>sudo</code> command, but root has plenty of ways around that restriction.</p>
+
+<p>The entry in <strong>Figure 4</strong> is the one I added to control access to <code>myprog</code>. It specifies that users who are listed in the AUDIO group, as defined near the top of the <code>sudoers</code> file, have access to only the one program, <code>myprog</code>, on one host, guest1.</p>
+
+<pre><code class="language-plaintext hljs">AUDIO guest1=/usr/local/bin/myprog</code></pre>
+
+<p><strong>Figure 4</strong>: This is the entry I added to allow users who are part of the AUDIO group access to <code>myprog</code> on the host, guest1.</p>
+
+<p>Note that the syntax of the line in <strong>Figure 4</strong> specifies only the host on which this access is to be allowed and the program. It does not specify that the user may run the program as any other user.</p>
+
+<p><strong>Bypassing passwords</strong></p>
+
+<p><strong>Figure 5</strong> illustrates using NOPASSWORD to allow the users specified in the group AUDIO to run <code>myprog</code> without the need for entering their passwords.</p>
+
+<pre><code class="language-plaintext hljs">AUDIO guest1=NOPASSWORD : /usr/local/bin/myprog</code></pre>
+
+<p><strong>Figure 5</strong>: This hypothetical entry would allow users who are part of the AUDIO group access to <code>myprog</code> without the need to enter their passwords.</p>
+
+<p>I did not do this for my program because I believe that users with <code>sudo</code> access must stop and think about what they are doing and this may help a bit with that. I just used the entry for my little program as an example.</p>
+
+<p><strong>Wheel</strong></p>
+
+<p>The wheel specification in the command section of the <code>sudoers</code> file as shown in <strong>Figure 6</strong> allows all users in the wheel group to run all commands on any host. The wheel group is defined in the <code>/etc/group</code> file and users must be added to the group there for this to work. The <code>%</code> sign preceding the group name means that <code>sudo</code> should look for that group in the <code>/etc/group</code> file.</p>
+
+<pre><code class="language-plaintext hljs">%wheel ALL = (ALL) ALL</code></pre>
+
+<p><strong>Figure 6</strong>: This entry says that all users who are members of the wheel group as defined in the <code>/etc/group</code> file can run all commands on any host.</p>
+
+<p>This is a good way to delegate full root access to multiple users without providing the root password. Just adding a user to the wheel group gives them access to full root powers. It also provides a means to monitor their activities via the log entries created by <code>sudo</code>. Some distributions such as Ubuntu add users’ IDs to the wheel group in <code>/etc/group</code> which allows them to use the <code>sudo</code> command to use all privileged commands.</p>
+
+<p class="h2">Use case 2: The presentation</p>
+
+<p>We usually think of presentations in terms of slick slides created by LibreOffice Impress or PowerPoint, animated transitions, and graphics, but that need not be the case. On March 3 of this year, I presented an extended session at Open Source 101 in Columbia South Carolina, entitled, “Using and Configuring Bash.”</p>
+
+<p>Now, if you are attending a long session about using Bash, why would you want to see a lot of fancy slides? Personally, I want to see Bash in use. So I created a Bash script that became my presentation. I am not a fast or accurate typist so this also allowed me to preprogram all of the commands I wanted to demonstrate into the Bash script so I would only need to press the <code>Enter</code> key to move to the next slide containing text or to issue a command. This worked very well for me and the attendees seemed to like it as well because it was a really good use case for Bash scripts.</p>
+
+<p>This is relevant because one and only one of the commands in this 1500 line Bash shell script required root privilege. It would be incredibly insecure to login as root and run the entire program. What if there were to be an error that deleted or mangles some important system-level files? As a sysadmin and a Bash programmer, I am not perfect and errors happen.</p>
+
+<p>So the answer was to run the program as the “student” user and use the <code>sudo</code> command as a prefix to the one command that required privileged access. Even in the middle of my presentation, typing in the password for the student user was easy. I also used this in my presentation as an example of one appropriate use of <code>sudo</code>.</p>
+
+<p>The setup for this use case is the same as for the previous case, just with different user names and command names.</p>
+
+<p class="h2">Final thoughts</p>
+
+<p>I have used <code>sudo</code> in these cases for a very limited objective – providing one or two users with access to a single command. I accomplished this with two lines if you ignore my own comments. Delegating the authority to perform specific tasks to users who do not have root access is simple and can save you as a sysadmin a good deal of time. It can also significantly enhance security by providing access to specific commands only when necessary.</p>
+
+<p>The <code>sudo</code> command also generates log entries that can help detect problems. The <code>sudoers</code> file offers a plethora of capabilities and options for configuration. Check the <code>man</code> files for <code>sudo</code> and <code>sudoers</code> for the down and dirty details.</p>
+
+<p><em><strong>[ Download now: <a href="https://opensource.com/downloads/bash-scripting-ebook?intcmp=701f20000012ngPAAQ">A sysadmin's guide to Bash scripting</a>.&nbsp;]</strong></em></p>
+</div>
+      
+  
+  </div>
+
+  <div class="block">
+
+  
+    
+
+      <div class="views-element-container"><div class="listicle-view js-view-dom-id-b6e33243ef176b120959d6124e5a2f58c80e5361dbcf39c186eb1db4dc9b7d7c">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="listicle-row"><div class="views-field views-field-field-listicle"><div class="field-content"></div></div></div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  
+  </div>
+
+  <div class="block">
+
+  
+    
+
+      <div class="topics">
+  <strong>Topics:</strong>&nbsp;&nbsp;
+      <a href="https://www.redhat.com/sysadmin/topics/linux" class="btn btn-primary btn-sm font-weight-bold">Linux</a>&nbsp;&nbsp;
+  </div>
+  
+  </div>
+
+    </div>
+  </div>
+</div>
+<div>
+  <div>
+    
+  <div class="block">
+
+  
+    
+
+      
+<section data-history-node-id="2041" role="article" about="/sysadmin/using-sudo-delegate" typeof="schema:Article" id="node--article--2041" class="section my-5 py-5 bg-light-gray authors-bio authors-bio--article">
+  <div class="container">
+          <div class="row">
+        <div class="col-md-2 text-center">
+                      
+<img data-affiliation="Sudoer" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/david-crop.jpg" width="240" height="240" typeof="foaf:Image" loading="lazy" class="rounded-circle img-fluid" alt="Author’s photo">
+
+
+          
+        </div>
+        <div class="col-md-10 col-lg-8">
+          <h2 class="font-weight-light text-center text-md-left">
+                          David Both
+                      </h2>
+          <div>
+                          <p>
+                David Both is an Open Source Software and GNU/Linux advocate, trainer, writer, and speaker who lives in Raleigh North Carolina. He is a strong proponent of and evangelist for the "Linux Philosophy."
+                                  <a href="https://www.redhat.com/sysadmin/users/david-both" class="author-more-link">More about me</a>
+                              </p>
+                      </div>
+        </div>
+      </div>
+      </div>
+</section>
+
+
+
+  
+  </div>
+
+  <div class="block">
+
+  
+    
+
+      
+
+  
+  </div>
+
+  </div>
+</div>
+<div>
+  <div>
+    
+
+  <div class="block block--cta cta cta--red-on-black cta-- my-5 p-3 text-center">
+
+  
+    
+
+    <div class="d-md-flex justify-content-around align-items-center flex-wrap">
+    <div class="cta__content my-2">
+      
+            <div class="cta__field-content p-2"><h4>On Demand: Red Hat Summit 2021 Virtual Experience</h4>
+
+<p>Relive our April event with&nbsp;demos, keynotes, and technical sessions from<br>
+experts, all available on demand.</p>
+</div>
+      
+    </div>
+        <div class="cta__link my-2">
+      <a href="https://www.redhat.com/en/summit?intcmp=7013a0000026RhqAAE" target="_blank" class="btn btn-lg btn-danger font-weight-bold">
+        Watch Now
+      </a>
+    </div>
+      </div>
+  
+  </div>
+
+  </div>
+</div>
+<div class="section">
+  <div class="container">
+    <div>
+      
+  <div class="block">
+
+  
+    
+
+      <div class="views-element-container"><div class="js-view-dom-id-5023474c4f352eb1427c1616f7cddd698a484948b57632ae584e2dc9cc52ce15">
+  
+  
+  
+
+  
+  
+  
+
+    <h2>Related Content</h2>
+                        <div class="card-deck my-4">
+                        <article data-history-node-id="4811" role="article" about="/sysadmin/enable-sysadmins-june-2021-top-10-linux-article-round" typeof="schema:Article" id="node--article--4811" class="card card--article node node--promoted">
+      <div class="card-img-top">
+            <div class="article__field-media"><article>
+  
+      
+  <div class="blazy image__field-media-image blazy--on" data-blazy="">
+    <div class="field__label font-weight-bold visually-hidden">
+      Image    </div>
+                  <div class="field__item">
+
+
+
+                    <div class="media media--blazy  media--responsive media--image">
+        
+<img class="media__image media__element b-lazy b-responsive img-fluid b-loaded" srcset="/sysadmin/sites/default/files/styles/card/public/2019-08/ten.png?itok=XjD-5Iq6 1x" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/ten.png" typeof="foaf:Image" loading="lazy" alt="10 Basic Linux Commands You Need to Know">
+
+
+        
+      
+    </div>
+        
+  
+</div>
+              </div>
+
+  </article>
+</div>
+      </div>
+      <div class="card-body">
+    <div class="h4 card-title"><a href="https://www.redhat.com/sysadmin/enable-sysadmins-june-2021-top-10-linux-article-round"><span property="schema:name">Enable Sysadmin's June 2021 top 10 Linux article round-up</span>
+</a></div>
+    <div class="card-text">
+            <div property="schema:text" class="clearfix article__body">Check out our ten most-read articles from the month of June</div>
+      </div>
+  </div>
+  <div class="card-footer">
+    <div class="article-date">
+      <span class="label">Posted:</span>
+      July 2, 2021
+    </div>
+    <div class="article-authors">
+              <span class="label">Author:</span>
+                    <a href="https://www.redhat.com/sysadmin/users/tcarriga" class="article-author article-author--primary">Tyler Carrigan<span class="author-affiliate"> (Red Hat)</span></a>          </div>
+  </div>
+</article>
+
+
+                            <article data-history-node-id="4751" role="article" about="/sysadmin/linux-commands-to-know" typeof="schema:Article" id="node--article--4751" class="card card--article node node--promoted">
+      <div class="card-img-top">
+            <div class="article__field-media"><article>
+  
+      
+  <div class="blazy image__field-media-image blazy--on" data-blazy="">
+    <div class="field__label font-weight-bold visually-hidden">
+      Image    </div>
+                  <div class="field__item">
+
+
+
+                    <div class="media media--blazy  media--responsive media--image">
+        
+<img class="media__image media__element b-lazy b-responsive img-fluid b-loaded" srcset="/sysadmin/sites/default/files/styles/card/public/2020-08/tools-690038_1920%20Cropped_0.jpg?itok=3GEa0FmW 1x" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/tools-690038_1920 Cropped_0.jpg" typeof="foaf:Image" loading="lazy" alt="My worst sysadmin mistake">
+
+
+        
+      
+    </div>
+        
+  
+</div>
+              </div>
+
+  </article>
+</div>
+      </div>
+      <div class="card-body">
+    <div class="h4 card-title"><a href="https://www.redhat.com/sysadmin/linux-commands-to-know"><span property="schema:name">17 Linux commands every sysadmin should know</span>
+</a></div>
+    <div class="card-text">
+            <div property="schema:text" class="clearfix article__body">Get out your notepad, here is a huge list of commands that every Linux sysadmin needs to know.</div>
+      </div>
+  </div>
+  <div class="card-footer">
+    <div class="article-date">
+      <span class="label">Posted:</span>
+      June 30, 2021
+    </div>
+    <div class="article-authors">
+              <span class="label">Authors:</span>
+                    <a href="https://www.redhat.com/sysadmin/users/tcarriga" class="article-author article-author--primary">Tyler Carrigan<span class="author-affiliate"> (Red Hat)</span></a><span>, </span>              <a href="https://www.redhat.com/sysadmin/users/nathan-lager" class="article-author article-author--co">Nathan Lager<span class="author-affiliate"> (Red Hat, Sudoer)</span></a><span>, </span>              <a href="https://www.redhat.com/sysadmin/users/ricardo-gerardi" class="article-author article-author--co">Ricardo Gerardi<span class="author-affiliate"> (Red Hat, Sudoer)</span></a><span>, </span>              <a href="https://www.redhat.com/sysadmin/users/roberto-nozaki" class="article-author article-author--co">Roberto Nozaki<span class="author-affiliate"> (Red Hat, Sudoer)</span></a>          </div>
+  </div>
+</article>
+
+
+                            <article data-history-node-id="4721" role="article" about="/sysadmin/bash-error-handling" typeof="schema:Article" id="node--article--4721" class="card card--article node node--promoted">
+      <div class="card-img-top">
+            <div class="article__field-media"><article>
+  
+      
+  <div class="blazy image__field-media-image blazy--on" data-blazy="">
+    <div class="field__label font-weight-bold visually-hidden">
+      Image    </div>
+                  <div class="field__item">
+
+
+
+                    <div class="media media--blazy  media--responsive media--image">
+        
+<img class="media__image media__element b-lazy b-responsive img-fluid b-loaded" srcset="/sysadmin/sites/default/files/styles/card/public/2020-02/questionmark%20Cropped.jpg?itok=cCeFcLlF 1x" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/questionmark Cropped.jpg" typeof="foaf:Image" loading="lazy" alt="Bash error handling by example">
+
+
+        
+      
+    </div>
+        
+  
+</div>
+              </div>
+
+  </article>
+</div>
+      </div>
+      <div class="card-body">
+    <div class="h4 card-title"><a href="https://www.redhat.com/sysadmin/bash-error-handling"><span property="schema:name">Learn Bash error handling by example</span>
+</a></div>
+    <div class="card-text">
+            <div property="schema:text" class="clearfix article__body">There's no better way to learn how to handle errors in your Bash scripts than to see it done.</div>
+      </div>
+  </div>
+  <div class="card-footer">
+    <div class="article-date">
+      <span class="label">Posted:</span>
+      June 29, 2021
+    </div>
+    <div class="article-authors">
+              <span class="label">Author:</span>
+                    <a href="https://www.redhat.com/sysadmin/user/543526" class="article-author article-author--primary">Jose Vicente Nunez</a>          </div>
+  </div>
+</article>
+
+
+                              </div>
+            
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  
+  </div>
+
+    </div>
+  </div>
+</div>
+<div class="section my-5 pb-5 narrow">
+  <div class="container">
+    <div>
+      
+    </div>
+  </div>
+</div>
+<div class="section my-5 pb-5 ">
+  <div class="container">
+    <div>
+      
+
+  <div class="block block--cta cta cta--red-on-black cta-- my-5 p-3 text-center">
+
+  
+    
+
+    <div class="d-md-flex justify-content-around align-items-center flex-wrap">
+    <div class="cta__content my-2">
+      
+            <div class="cta__field-content p-2"><p class="h4 mb-4 mt-3 font-weight-bold">OUR BEST CONTENT, DELIVERED TO YOUR INBOX</p>
+
+<p><iframe title="Subscribe to our newsletter" aria-label="Embedded form to subscribe to our email newsletter" frameborder="0" height="208" scrolling="no" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/eloqua-embedded-subscribe.html" style="max-width:670px;margin:0 auto;" width="100%" __idm_frm__="87"></iframe></p>
+</div>
+      
+    </div>
+      </div>
+  
+  </div>
+
+    </div>
+  </div>
+</div>
+
+  </article>
+
+  
+  </div>
+
+
+              </div>
+        </main>
+
+            <footer>
+              <div class="page__colophon bg-dark-gray py-4 bg-dark-gray">
+          <div class="container">
+              
+  <div class="block block--basic block--sysadmin-colophon-disclaimer">
+
+  
+    
+
+      
+            <div class="basic__body"><p>The opinions expressed on this website are those of each author, not of the author's employer or of Red Hat. The content published on this site are community contributions and are for informational purpose only AND ARE NOT, AND ARE NOT INTENDED TO BE, RED HAT DOCUMENTATION, SUPPORT, OR ADVICE.</p>
+
+<p>Red Hat and the Red Hat logo are trademarks of Red Hat, Inc., registered in the United States and other countries.</p>
+</div>
+      
+  
+  </div>
+
+
+          </div>
+        </div>
+                    <div class="page__footer bg-dark py-3">
+        <div class="container">
+          <div class="d-sm-flex justify-content-between align-items-center">
+              
+
+  
+    
+
+    
+  <a href="https://www.redhat.com/" class="navbar-brand mr-0 mr-lg-auto mb-3 mb-sm-0">
+            <img src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/logo.svg" width="135" height="31" class="d-inline-block align-top" alt="Red Hat logo">
+
+        
+  </a>
+
+
+
+  <div class="block block--basic block--copyright my-0 mx-sm-3 mb-1 mb-sm-0">
+
+  
+    
+
+      
+            <div class="basic__body"><p>Copyright ©2020 Red Hat, Inc.</p>
+</div>
+      
+  
+  </div>
+
+  <div class="block block--sysadmin-footer my-0 mb-1 mb-sm-0">
+
+  
+    
+
+      
+  
+
+
+  <ul class="nav d-flex d-sm-block d-md-flex justify-content-center align-items-center">
+                                          <li class="nav-item  ">
+                      <a href="https://www.redhat.com/en/about/privacy-policy" class="nav-link">Privacy Policy</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="https://www.redhat.com/en/about/terms-use" class="nav-link">Terms of Use</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="https://www.redhat.com/en/about/all-policies-guidelines" class="nav-link">All policies and guidelines</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+  <div class="block block--basic block--footerredhatsummit">
+
+  
+    
+
+      
+            <div class="basic__body"><div style="margin-left: 1rem"><a href="https://www.redhat.com/en/summit?intcmp=7013a0000026RhqAAE" target="_blank"><img alt="Red Hat Summit" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/Logo-Red_Hat-Summit-A-Standard-RGB-02_0.svg" width="72px"></a></div>
+</div>
+      
+  
+  </div>
+
+  <div class="block block--sharelinks">
+
+  
+    
+
+      <div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" data-a2a-url="https://www.redhat.com/sysadmin/using-sudo-delegate" style="line-height: 32px;">
+  <a class="a2a_button_twitter" target="_blank" href="https://www.redhat.com/#twitter" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_twitter" style="background-color: rgb(85, 172, 238);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M28 8.557a9.913 9.913 0 0 1-2.828.775 4.93 4.93 0 0 0 2.166-2.725 9.738 9.738 0 0 1-3.13 1.194 4.92 4.92 0 0 0-3.593-1.55 4.924 4.924 0 0 0-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.942 4.942 0 0 0-.665 2.477c0 1.71.87 3.214 2.19 4.1a4.968 4.968 0 0 1-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174-.318 0-.626-.03-.928-.086a4.935 4.935 0 0 0 4.6 3.42 9.893 9.893 0 0 1-6.114 2.107c-.398 0-.79-.023-1.175-.068a13.953 13.953 0 0 0 7.55 2.213c9.056 0 14.01-7.507 14.01-14.013 0-.213-.005-.426-.015-.637.96-.695 1.795-1.56 2.455-2.55z"></path></svg></span><span class="a2a_label">Twitter</span></a>
+  <a class="a2a_button_facebook" target="_blank" href="https://www.redhat.com/#facebook" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_facebook" style="background-color: rgb(24, 119, 242);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M17.78 27.5V17.008h3.522l.527-4.09h-4.05v-2.61c0-1.182.33-1.99 2.023-1.99h2.166V4.66c-.375-.05-1.66-.16-3.155-.16-3.123 0-5.26 1.905-5.26 5.405v3.016h-3.53v4.09h3.53V27.5h4.223z"></path></svg></span><span class="a2a_label">Facebook</span></a>
+  <a class="a2a_button_linkedin" target="_blank" href="https://www.redhat.com/#linkedin" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_linkedin" style="background-color: rgb(0, 123, 181);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M6.227 12.61h4.19v13.48h-4.19V12.61zm2.095-6.7a2.43 2.43 0 0 1 0 4.86c-1.344 0-2.428-1.09-2.428-2.43s1.084-2.43 2.428-2.43m4.72 6.7h4.02v1.84h.058c.56-1.058 1.927-2.176 3.965-2.176 4.238 0 5.02 2.792 5.02 6.42v7.395h-4.183v-6.56c0-1.564-.03-3.574-2.178-3.574-2.18 0-2.514 1.7-2.514 3.46v6.668h-4.187V12.61z" fill="#FFF"></path></svg></span><span class="a2a_label">LinkedIn</span></a>
+  <a class="a2a_button_reddit" target="_blank" href="https://www.redhat.com/#reddit" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_reddit" style="background-color: rgb(255, 69, 0);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M28.543 15.774a2.953 2.953 0 0 0-2.951-2.949 2.882 2.882 0 0 0-1.9.713 14.075 14.075 0 0 0-6.85-2.044l1.38-4.349 3.768.884a2.452 2.452 0 1 0 .24-1.176l-4.274-1a.6.6 0 0 0-.709.4l-1.659 5.224a14.314 14.314 0 0 0-7.316 2.029 2.908 2.908 0 0 0-1.872-.681 2.942 2.942 0 0 0-1.618 5.4 5.109 5.109 0 0 0-.062.765c0 4.158 5.037 7.541 11.229 7.541s11.22-3.383 11.22-7.541a5.2 5.2 0 0 0-.053-.706 2.963 2.963 0 0 0 1.427-2.51zm-18.008 1.88a1.753 1.753 0 0 1 1.73-1.74 1.73 1.73 0 0 1 1.709 1.74 1.709 1.709 0 0 1-1.709 1.711 1.733 1.733 0 0 1-1.73-1.711zm9.565 4.968a5.573 5.573 0 0 1-4.081 1.272h-.032a5.576 5.576 0 0 1-4.087-1.272.6.6 0 0 1 .844-.854 4.5 4.5 0 0 0 3.238.927h.032a4.5 4.5 0 0 0 3.237-.927.6.6 0 1 1 .844.854zm-.331-3.256a1.726 1.726 0 1 1 1.709-1.712 1.717 1.717 0 0 1-1.712 1.712z" fill="#fff"></path></svg></span><span class="a2a_label">Reddit</span></a>
+  <a class="a2a_button_email" target="_blank" href="https://www.redhat.com/#email" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_email" style="background-color: rgb(1, 102, 255);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M26 21.25v-9s-9.1 6.35-9.984 6.68C15.144 18.616 6 12.25 6 12.25v9c0 1.25.266 1.5 1.5 1.5h17c1.266 0 1.5-.22 1.5-1.5zm-.015-10.765c0-.91-.265-1.235-1.485-1.235h-17c-1.255 0-1.5.39-1.5 1.3l.015.14s9.035 6.22 10 6.56c1.02-.395 9.985-6.7 9.985-6.7l-.015-.065z"></path></svg></span><span class="a2a_label">Email</span></a>
+</div>
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_default_style" style="line-height: 32px;">
+  <a class="a2a_button_twitter" target="_blank" href="https://www.redhat.com/#twitter" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_twitter" style="background-color: rgb(85, 172, 238);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M28 8.557a9.913 9.913 0 0 1-2.828.775 4.93 4.93 0 0 0 2.166-2.725 9.738 9.738 0 0 1-3.13 1.194 4.92 4.92 0 0 0-3.593-1.55 4.924 4.924 0 0 0-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.942 4.942 0 0 0-.665 2.477c0 1.71.87 3.214 2.19 4.1a4.968 4.968 0 0 1-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174-.318 0-.626-.03-.928-.086a4.935 4.935 0 0 0 4.6 3.42 9.893 9.893 0 0 1-6.114 2.107c-.398 0-.79-.023-1.175-.068a13.953 13.953 0 0 0 7.55 2.213c9.056 0 14.01-7.507 14.01-14.013 0-.213-.005-.426-.015-.637.96-.695 1.795-1.56 2.455-2.55z"></path></svg></span><span class="a2a_label">Twitter</span></a>
+  <a class="a2a_button_facebook" target="_blank" href="https://www.redhat.com/#facebook" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_facebook" style="background-color: rgb(24, 119, 242);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M17.78 27.5V17.008h3.522l.527-4.09h-4.05v-2.61c0-1.182.33-1.99 2.023-1.99h2.166V4.66c-.375-.05-1.66-.16-3.155-.16-3.123 0-5.26 1.905-5.26 5.405v3.016h-3.53v4.09h3.53V27.5h4.223z"></path></svg></span><span class="a2a_label">Facebook</span></a>
+  <a class="a2a_button_linkedin" target="_blank" href="https://www.redhat.com/#linkedin" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_linkedin" style="background-color: rgb(0, 123, 181);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M6.227 12.61h4.19v13.48h-4.19V12.61zm2.095-6.7a2.43 2.43 0 0 1 0 4.86c-1.344 0-2.428-1.09-2.428-2.43s1.084-2.43 2.428-2.43m4.72 6.7h4.02v1.84h.058c.56-1.058 1.927-2.176 3.965-2.176 4.238 0 5.02 2.792 5.02 6.42v7.395h-4.183v-6.56c0-1.564-.03-3.574-2.178-3.574-2.18 0-2.514 1.7-2.514 3.46v6.668h-4.187V12.61z" fill="#FFF"></path></svg></span><span class="a2a_label">LinkedIn</span></a>
+  <a class="a2a_button_reddit" target="_blank" href="https://www.redhat.com/#reddit" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_reddit" style="background-color: rgb(255, 69, 0);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M28.543 15.774a2.953 2.953 0 0 0-2.951-2.949 2.882 2.882 0 0 0-1.9.713 14.075 14.075 0 0 0-6.85-2.044l1.38-4.349 3.768.884a2.452 2.452 0 1 0 .24-1.176l-4.274-1a.6.6 0 0 0-.709.4l-1.659 5.224a14.314 14.314 0 0 0-7.316 2.029 2.908 2.908 0 0 0-1.872-.681 2.942 2.942 0 0 0-1.618 5.4 5.109 5.109 0 0 0-.062.765c0 4.158 5.037 7.541 11.229 7.541s11.22-3.383 11.22-7.541a5.2 5.2 0 0 0-.053-.706 2.963 2.963 0 0 0 1.427-2.51zm-18.008 1.88a1.753 1.753 0 0 1 1.73-1.74 1.73 1.73 0 0 1 1.709 1.74 1.709 1.709 0 0 1-1.709 1.711 1.733 1.733 0 0 1-1.73-1.711zm9.565 4.968a5.573 5.573 0 0 1-4.081 1.272h-.032a5.576 5.576 0 0 1-4.087-1.272.6.6 0 0 1 .844-.854 4.5 4.5 0 0 0 3.238.927h.032a4.5 4.5 0 0 0 3.237-.927.6.6 0 1 1 .844.854zm-.331-3.256a1.726 1.726 0 1 1 1.709-1.712 1.717 1.717 0 0 1-1.712 1.712z" fill="#fff"></path></svg></span><span class="a2a_label">Reddit</span></a>
+  <a class="a2a_button_email" target="_blank" href="https://www.redhat.com/#email" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_email" style="background-color: rgb(1, 102, 255);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M26 21.25v-9s-9.1 6.35-9.984 6.68C15.144 18.616 6 12.25 6 12.25v9c0 1.25.266 1.5 1.5 1.5h17c1.266 0 1.5-.22 1.5-1.5zm-.015-10.765c0-.91-.265-1.235-1.485-1.235h-17c-1.255 0-1.5.39-1.5 1.3l.015.14s9.035 6.22 10 6.56c1.02-.395 9.985-6.7 9.985-6.7l-.015-.065z"></path></svg></span><span class="a2a_label">Email</span></a>
+<div style="clear: both;"></div></div>
+
+<script>
+  var a2a_config = a2a_config || {};
+  a2a_config.templates = a2a_config.templates || {};
+  a2a_config.templates.twitter = {
+    text: "Using sudo to delegate permissions in Linux https://red.ht/2ypF3tg via #EnableSysadmin by @LinuxGeek46",
+  };
+    a2a_config.templates.facebook = {
+    hashtag: "#EnableSysadmin",
+  };
+  </script>
+
+  
+  </div>
+
+
+  <div class="block block--cta block--ctasubscribesidebar cta cta--blue-on-white cta-- my-5 p-3 text-center">
+
+  
+    
+
+    <div class="d-md-flex justify-content-around align-items-center flex-wrap">
+    <div class="cta__content my-2">
+      
+            <div class="cta__field-content p-2"><div class="subscribe-sidebar show">
+<div class="target-band-never-show-button">x</div>
+
+<h4>Subscribe now</h4>
+
+<p class="eloqua-email-capture-text">Get the highlights in your inbox every week.</p>
+
+<p><iframe aria-label="Embedded form to subscribe to our email newsletter" frameborder="0" height="208" scrolling="no" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/eloqua-embedded-email-capture-block.html" style="max-width:670px;margin:0 auto;" title="Subscribe to our newsletter" width="100%" __idm_frm__="88"></iframe></p>
+</div>
+</div>
+      
+    </div>
+      </div>
+  
+  </div>
+
+
+          </div>
+        </div>
+            </div></footer>
+      </div>
+
+  </div>
+
+
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/sysadmin\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/2041","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ckeditorheight":{"offset":1,"line_height":1.5,"unit":"em","disable_autogrow":null},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":25},"blazyIo":{"enabled":false,"disconnect":false,"rootMargin":"0px","threshold":[0]},"user":{"uid":0,"permissionsHash":"2ddc6cf1f04642fe2dbcaf7b6d1801d17bf0f6ec0ae19d4cc9e10b02dea0f05e"}}</script>
+
+<!--[if lte IE 9]>
+<script src="/sysadmin/sites/default/files/js/js_VhqXmo4azheUjYC30rijnR_Dddo0WjWkF27k5gTL8S4.js"></script>
+<![endif]-->
+<script src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/js_gyiwctQjVyqJ2GHO0M9MyMzuZplqVNH1J0eF6VKRd1M.js.download"></script><div style="position: static;"><div class="a2a_overlay" id="a2a_overlay"></div><div id="a2a_modal" class="a2a_modal a2a_hide" role="dialog" tabindex="-1" aria-label=""><div class="a2a_modal_body a2a_menu a2a_hide" id="a2a_copy_link"><span id="a2a_copy_link_icon" class="a2a_svg a2a_s_link a2a_logo_color"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M24.4 21.18c0-.36-.1-.67-.36-.92l-2.8-2.8a1.24 1.24 0 0 0-.92-.38c-.38 0-.7.14-.97.43.02.04.1.12.25.26l.3.3.2.24c.08.12.14.24.17.35.03.1.05.23.05.37 0 .36-.13.66-.38.92a1.25 1.25 0 0 1-.92.37 1.4 1.4 0 0 1-.37-.03 1.06 1.06 0 0 1-.35-.18 2.27 2.27 0 0 1-.25-.2 6.82 6.82 0 0 1-.3-.3l-.24-.25c-.3.28-.44.6-.44.98 0 .36.13.66.38.92l2.78 2.8c.24.23.54.35.9.35.37 0 .68-.12.93-.35l1.98-1.97c.26-.25.38-.55.38-.9zm-9.46-9.5c0-.37-.13-.67-.38-.92l-2.78-2.8a1.24 1.24 0 0 0-.9-.37c-.36 0-.67.1-.93.35L7.97 9.92c-.26.25-.38.55-.38.9 0 .36.1.67.37.92l2.8 2.8c.24.25.55.37.92.37.36 0 .7-.13.96-.4-.03-.04-.1-.12-.26-.26s-.24-.23-.3-.3a2.67 2.67 0 0 1-.2-.24 1.05 1.05 0 0 1-.17-.35 1.4 1.4 0 0 1-.04-.37c0-.36.1-.66.36-.9.26-.26.56-.4.92-.4.14 0 .26.03.37.06.12.03.23.1.35.17.1.1.2.16.25.2l.3.3.24.26c.3-.28.44-.6.44-.98zM27 21.17c0 1.07-.38 2-1.15 2.73l-1.98 1.98c-.74.75-1.66 1.12-2.73 1.12-1.1 0-2-.38-2.75-1.14l-2.8-2.8c-.74-.74-1.1-1.65-1.1-2.73 0-1.1.38-2.04 1.17-2.82l-1.18-1.17c-.8.8-1.72 1.18-2.82 1.18-1.08 0-2-.36-2.75-1.12l-2.8-2.8C5.38 12.8 5 11.9 5 10.82c0-1.08.38-2 1.15-2.74L8.13 6.1C8.87 5.37 9.78 5 10.86 5c1.1 0 2 .38 2.75 1.15l2.8 2.8c.74.73 1.1 1.65 1.1 2.72 0 1.1-.38 2.05-1.17 2.82l1.18 1.18c.8-.8 1.72-1.2 2.82-1.2 1.08 0 2 .4 2.75 1.14l2.8 2.8c.76.76 1.13 1.68 1.13 2.76z"></path></svg></span><input id="a2a_copy_link_text" type="text" title="Copy link" readonly=""><div id="a2a_copy_link_copied">✓</div></div><div class="a2a_modal_body a2a_menu a2a_thanks a2a_hide" id="a2a_thanks"><div class="a2a_localize" data-a2a-localize="inner,ThanksForSharing">Thanks for sharing!</div></div></div><div class="a2a_menu a2a_full a2a_localize" id="a2apage_full" role="dialog" tabindex="-1" aria-label="Share" data-a2a-localize="title,Share"><div class="a2a_full_header"><div id="a2apage_find_container" class="a2a_menu_find_container"><input id="a2apage_find" class="a2a_menu_find a2a_localize" type="text" autocomplete="off" title="Find any service" data-a2a-localize="title,FindAnyServiceToAddTo"><span id="a2apage_find_icon" class="a2a_svg a2a_s_find"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#CCC" d="M19.7 18.2l-4.5-4.5c.7-1.1 1.2-2.3 1.2-3.6 0-3.5-2.8-6.3-6.3-6.3s-6.3 2.8-6.3 6.3 2.8 6.3 6.3 6.3c1.4 0 2.6-.4 3.6-1.2l4.5 4.5c.6.6 1.3.7 1.7.2.5-.4.4-1.1-.2-1.7zm-9.6-3.6c-2.5 0-4.5-2.1-4.5-4.5 0-2.5 2.1-4.5 4.5-4.5 2.5 0 4.5 2.1 4.5 4.5s-2 4.5-4.5 4.5z"></path></svg></span></div></div><div class="a2a_full_services" id="a2apage_full_services" role="presentation"></div><div class="a2a_full_footer"><a href="https://www.addtoany.com/" title="Share Buttons" rel="noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_a2a a2a_logo_color"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span>AddToAny</a></div></div><div id="a2apage_dropdown" class="a2a_menu a2a_mini a2a_localize a2a_hide" tabindex="-1" aria-label="Share" data-a2a-localize="label,Share"><div id="a2apage_title_container" class="a2a_menu_title_container a2a_hide"><div id="a2apage_title" class="a2a_menu_title"></div></div><div class="a2a_mini_services" id="a2apage_mini_services"></div><div id="a2apage_cols_container" class="a2a_cols_container"><div class="a2a_col1" id="a2apage_col1"></div><div id="a2apage_2_col1" class="a2a_hide"></div><div class="a2a_clear"></div></div><div class="a2apage_wide a2a_wide"><a href="https://www.redhat.com/sysadmin/using-sudo-delegate" id="a2apage_show_more_less" class="a2a_menu_show_more_less a2a_more a2a_localize" title="Show all" data-a2a-localize="title,ShowAll"><span class="a2a_svg a2a_s__default a2a_s_a2a a2a_logo_color"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span><span class="a2a_localize" data-a2a-localize="inner,More">More…</span></a></div></div></div>
+
+  <script type="text/javascript">
+    if (("undefined" !== typeof _satellite) && ("function" === typeof _satellite.pageBottom)) {
+      _satellite.pageBottom();
+    }
+  </script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"a03a21ae8a","applicationID":"467345710","transactionName":"ZlNTbUBQDxZUWxJRVl8ZcFpGWA4LGkgHX1xuVVBaWlQ=","queueTime":0,"applicationTime":53,"atts":"ShRQGwhKHBg=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script><noscript><img src="https://www.redhat.com/akam/11/pixel_254db87b?a=dD02Zjk4ODAyZWM4MTI3N2FhMGNmY2ZkYTQ3MDRmMmUzMTMyMjc2YmI5JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript><script type="text/javascript" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/ilnbQ4"></script>
+
+<iframe sandbox="allow-scripts allow-same-origin" title="Adobe ID Syncing iFrame" id="destination_publishing_iframe_redhat_0" name="destination_publishing_iframe_redhat_0_name" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/dest5.html" style="display: none; width: 0px; height: 0px;" class="aamIframeLoaded"></iframe><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><script>_satellite["_runScript1"](function(event, target, Promise) {
+"undefined"!=typeof jQuery&&(window._sdi=window._sdi||{},window._sdi.addEventHandler=window.addEventListener?function(e,i,t){e.addEventListener(i,t,!1)}:function(e,i,t){e.attachEvent("on"+i,t)},window._sdi.addEventHandler(window,"message",function(e){var i={},t=0;-1!==e.origin.indexOf("loop=1")?t=1:e.srcElement&&e.srcElement.playerOptions&&1==e.srcElement.playerOptions.loop&&(t=1);var n=0;if(e.srcElement&&e.srcElement.playerOptions&&1==e.srcElement.playerOptions.autoplay&&(n=1),e.origin.match(/youtube\.com/)&&"undefined"!=typeof JSON&&!t&&!n){i=JSON.parse(e.data);var o=window._sdi.yt.videos;if("infoDelivery"==i.event){var a,d={};for(var r in i.info.videoData&&((d=o[a=i.info.videoData.video_id]||{}).info=i.info,d.id=i.id,o[a]=d),window._sdi.yt.videos){(c=window._sdi.yt.videos[r]).id==i.id&&(d=c)}var s=window._sdi.yt.sc||{};d.info&&(1.5<Math.abs(i.info.currentTime-d.info.currentTime)&&!0===s.track&&(s.s().Media.stop(d.info.videoData.title,d.info.currentTime),"paused"!=d.state&&s.s().Media.play(d.info.videoData.title,i.info.currentTime)),d.info.currentTime=i.info.currentTime),2==i.info.playerState&&(s.s().Media.stop(d.info.videoData.title,d.info.currentTime),d.state="paused"),1==i.info.playerState&&(d.started?!0===s.track&&s.s().Media.play(d.info.videoData.title,d.info.currentTime):(d.started=!0)===s.track&&(s.s().Media.open(d.info.videoData.title,d.info.duration,"youtube"),s.s().Media.play(d.info.videoData.title,d.info.currentTime)),d.state="playing"),3==i.info.playerState&&d.started&&(!0===s.track&&s.s().Media.stop(d.info.videoData.title,d.info.currentTime),d.state="paused"),0===i.info.playerState&&(!0===s.track&&(s.s().Media.stop(d.info.videoData.title,d.info.currentTime),s.s().Media.close(d.info.videoData.title)),d.state="completed")}else if("onStateChange"==i.event){for(var r in window._sdi.yt.videos){var c;(c=window._sdi.yt.videos[r]).id==i.id&&(d=c)}s=window._sdi.yt.sc||{};1==i.info&&(d.started?!0===s.track&&s.s().Media.play(d.info.videoData.title,d.info.currentTime):(d.started=!0)===s.track&&(s.s().Media.open(d.info.videoData.title,d.info.duration,"youtube"),"paused"!=d.state&&s.s().Media.play(d.info.videoData.title,i.info.currentTime)),d.state="playing"),2==i.info&&(!0===s.track&&s.s().Media.stop(d.info.videoData.title,d.info.currentTime),d.state="paused"),3==i.info&&d.started&&(!0===s.track&&s.s().Media.stop(d.info.videoData.title,d.info.currentTime),d.state="paused"),0===i.info&&(!0===s.track&&(s.s().Media.stop(d.info.videoData.title,d.info.currentTime),s.s().Media.close(d.info.videoData.title)),d.state="completed")}}}),window._sdi.loadScript=function(e,i){var t=document.createElement("script");t.type="text/javascript",i&&"function"==typeof i&&(t.readyState?t.onreadystatechange=function(){"loaded"!==t.readyState&&"complete"!==t.readyState||(t.onreadystatechange=null,i())}:t.onload=function(){i()}),t.src=e,document.getElementsByTagName("head")[0].appendChild(t)},window._sdi.yt={stages:{},players:{},sc:{track:!0,s:function(){return s_gi(_satellite.getVar("rsid"))}},init:function(){for(var e=document.getElementsByTagName("script"),i=!1,t=(window._sdi.yt.videos,0);t<e.length;t++){(e[t].src||"").match(/youtube\.com\/iframe_api/)&&(i=!0)}!1===i?window._sdi.loadScript("//www.youtube.com/iframe_api",function(){window._sdi.yt.ready("api")}):window._sdi.yt.ready("api")},ready:function(e){window._sdi.yt.stages[e]=!0,window._sdi.yt.stages.dom&&window._sdi.yt.stages.api&&window._sdi.yt.checkIframes()},checkIframes:function(){var d=window._sdi.yt.videos,r=1e3,s=0;jQuery('iframe[src*="youtube"][data-sdiyt!="true"]').each(function(e,i){if(-1!=i.src.indexOf("loop=1"))var t=null;else{var n;t=i.src.match(/h?t?t?p?s?\:?\/\/www\.youtube(-nocookie)?\.com\/embed\/([\w-]{11})(?:\?.*)?/)}if(t){n=2<t.length?t[2]:"",i.id||(i.id=n+s,s++);var o=!1;if(!i.src.match(/origin/)&&document.location.protocol,i.src.match(/enablejsapi=1/)||(i.src+=(-1<i.src.indexOf("?")?"&":"?")+"enablejsapi=1",o=!0),"undefined"!=typeof jQuery&&o){var a=jQuery(this).clone();a.src=i.src,a.id=i.id,jQuery(this).replaceWith(a)}else"undefined"!=typeof YT&&"undefined"!=typeof YT.get?(ready=!0,d[n]={},(!YT.get(i.id)||"undefined"==typeof YT.get(i.id).v&&"undefined"!=typeof YT.get(i.id).v.videoId)&&(d[n].player=new YT.Player(i.id,{events:{onReady:function(){},onStateChange:function(){},videoId:i.id}})),i.setAttribute("data-sdiyt","true")):r=100}}),setTimeout(function(){window._sdi.yt.checkIframes()},r)},videos:{}},"undefined"!=typeof window._sdi&&"undefined"!=typeof window._sdi.addEventHandler&&window._sdi.addEventHandler(window,"load",function(){1<=jQuery('iframe[src*="youtube"]').length?(window._sdi.yt.init(),window._sdi.yt.ready("dom")):window._sdi.ytinterval=setInterval(function(){_satellite.logger.log("looking for youtube videos..."),1<=jQuery('iframe[src*="youtube"]').length&&(_satellite.logger.log("found a youtube video!"),window._sdi.yt.init(),window._sdi.yt.ready("dom"),clearInterval(window._sdi.ytinterval))},500)}));
+});</script><script>_satellite["_runScript2"](function(event, target, Promise) {
+window._sdi=window._sdi||{},window._sdi.dtm=window._sdi.dtm||{},window._sdi.dtm.video=window._sdi.dtm.video||{},_sdi.dtm.video.wistia={sc:{track:!0,s:function(){if(_sdi.util.getVar("window.s_gi")){if(void 0!==_satellite.getVar("rsid"))return s_gi(_satellite.getVar("rsid"));_satellite.logger.log("WISTIA Tracking:No RSID for s.Media: Wistia Tracking",5)}}},vids:[],timesPolled:0,pollToBind:function(){_satellite.logger.log("WISTIA Tracking: Polling for remaing video binding"),_sdi.dtm.video.wistia.timesPolled<30&&setTimeout(function(){_sdi.dtm.video.wistia.timesPolled++,_sdi.dtm.video.wistia.bindEvents()},1e3)},bindEvents:function(){ws=_sdi.dtm.video.wistia,sc=ws.sc,s=sc.s,poll=!1,s().Media.playerName="wistia",s().Media.autoTrack=!1;for(var i=0;i<_sdi.dtm.video.wistia.vids.length;i++){var e=_sdi.dtm.video.wistia.vids[i],d=e.name(),t=e.duration();""!=d?"undefined"==typeof e.adobeAnalyicsTrackingApplied?(_satellite.logger.log("WISTIA Tracking: Binding liteners to Wistia video named: "+d),void 0!==s()&&"undefined"!=typeof s().Media&&(!0===sc.track&&(_satellite.logger.log("WISTIA Tracking: the video opened: "+d),s().Media.open(d,t,"wistia")),e.bind("play",function(){"undefined"!=typeof s().Media.list[this.name()]&&"object"!=typeof s().Media.list[this.name()]&&(_satellite.logger.log("WISTIA Tracking: the video opened: "+this.name()),s().Media.open(this.name(),this.duration(),"wistia")),_satellite.logger.log("WISTIA Tracking: the video played: "+this.name()),s().Media.play(this.name(),this.time())}),e.bind("pause",function(){_satellite.logger.log("WISTIA Tracking: the video stoped: "+this.name()),s().Media.stop(this.name(),this.time())}),e.bind("seek",function(i){_satellite.logger.log("WISTIA Tracking: the video seeked to "+i),s().Media.stop(this.name(),this.time()),s().Media.play(this.name(),i)}),e.bind("end",function(){_satellite.logger.log("WISTIA Tracking: the video ended: "+this.name()),s().Media.stop(this.name(),this.time()),s().Media.close(this.name())}),e.adobeAnalyicsTrackingApplied=!0)):_satellite.logger.log("WISTIA Tracking: Liteners already bound to Wistia video named: "+d):poll=!0}poll&&_sdi.dtm.video.wistia.timesPolled<30&&_sdi.dtm.video.wistia.pollToBind()},findVideos:function(){_satellite.logger.log("WISTIA Tracking: Looking for videos"),window._wq=window._wq||[],_wq.push({id:"_all",onReady:function(i){_satellite.logger.log("WISTIA Tracking: Found "+i.name()+" videos"),_sdi.dtm.video.wistia.vids.push(i),_sdi.dtm.video.wistia.bindEvents()}})},init:function(){"undefined"!=typeof window.Wistia?(_sdi.dtm.video.wistia.findVideos(),0<_sdi.dtm.video.wistia.vids.length&&_sdi.dtm.video.wistia.bindEvents()):_satellite.logger.log("WISTIA Tracking: No API detected")}},_sdi.dtm.video.wistia.init();
+});</script><script>_satellite["_runScript3"](function(event, target, Promise) {
+if("undefined"!=typeof jQuery){var $documentInfo=jQuery(document),$windowInfo=jQuery(window),pageHeight=$documentInfo.height(),viewportHeight=$windowInfo.height(),initialPercent=viewportHeight/pageHeight,maxInterval=0;initialPercent=1<initialPercent?100:Math.round(100*initialPercent);var maxScroll=Math.floor(initialPercent);window._sdi.util.setCookie("sat_ppv",maxScroll),jQuery(window).scroll(function(){var i=jQuery(window),e=jQuery(document),o=i.scrollTop()/(e.height()-i.height())*100;maxScroll<o&&(maxScroll=Math.floor(o)),window._sdi.util.setCookie("sat_ppv",maxScroll)})}
+});</script><script>_satellite["_runScript4"](function(event, target, Promise) {
+if("yes"==_satellite.getVar("tagsAllowedFunc")&&"yes"==_satellite.getVar("rhMarketingLoaded")){var scCid=_satellite.cookie.get("rh_omni_tc");if(""!==scCid&&void 0!==scCid)for(var updatedLink="",anchors=window.document.getElementsByTagName("a"),i=0;i<anchors.length;i++)(-1<anchors[i].href.indexOf("vts.inxpo.com")||-1<anchors[i].href.indexOf("onlinexperiences.com"))&&-1==anchors[i].href.toLowerCase().indexOf("affiliatedata=")&&""!==(updatedLink=window._sdi.util.appendQuery(anchors[i].href,"AffiliateData",scCid))&&(anchors[i].href=updatedLink)}
+});</script><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./Using sudo to delegate permissions in Linux _ Enable Sysadmin_files/box-25a418976ea02a6f393fbbe77cec94bb.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><script>_satellite["_runScript5"](function(event, target, Promise) {
+if("yes"==_satellite.getVar("tagsAllowedFunc")&&"yes"==_satellite.getVar("rhMarketingLoaded")){var scCid=_satellite.cookie.get("rh_omni_tc");if(""!==scCid&&void 0!==scCid)for(var updatedLink="",anchors=window.document.getElementsByTagName("a"),i=0;i<anchors.length;i++)(-1<anchors[i].href.indexOf("vts.inxpo.com")||-1<anchors[i].href.indexOf("onlinexperiences.com"))&&-1==anchors[i].href.toLowerCase().indexOf("affiliatedata=")&&""!==(updatedLink=window._sdi.util.appendQuery(anchors[i].href,"AffiliateData",scCid))&&(anchors[i].href=updatedLink)}
+});</script></body></html>

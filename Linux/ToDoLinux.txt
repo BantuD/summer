@@ -1,0 +1,6 @@
+1. how to give permissions to a user
+2. how to give permissions to a user
+3. how to add a user in a group
+4  how to remove a user from a group 
+5  how to remove permissions from a user
+6  how to remove permissions from a group

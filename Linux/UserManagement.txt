@@ -1,0 +1,75 @@
+/////////USER MANAGEMENT//////////
+
+*To list down all the users in the system
+:> awk -F':' '{print $1}' /etc/passwd
+
+*To get the id of a username
+:> id user_name
+
+*To add a user //Only for root user
+:> sudo useradd user_name  
+//user id will be assigned automatically
+
+*To give a password to the username  //Only for root user
+:> passwd user_name
+//After using this command we have to enter the new password for the user and then the password gets updated to the new password.
+
+
+*To accesse user configuration file
+:>cat /etc/passwd
+
+//Presentation
+username : x : user id : user group id : : /home/username : /bin/bash
+
+
+*Modify the group ID of a user. //root permission
+:>usermod -g new_group_id user_name
+//This command can change the group ID of a user and hence it can even be used to move a user to an already existing group. 
+
+*Modify the User Name of a user //Root permission
+:>usermod -l new_user_name old_user_name
+
+*Modify the home directory of a user
+:>usermod -d new_user_home_directory_path user_name
+
+*To check home directory of a user
+:> eval echo ~user_name
+
+*To delete a user //Root permission
+:>userdel -r user_name 
+//Command deletes the user whose username is provided. Make sure that the user is not part of a group. If the user is part of a group then it will not be deleted directly, hence we will have to first remove him from the group and then we can delete him.
+
+*To create a group
+:> groupadd group_name
+
+
+*To list down groups
+:>cat /etc/group
+or :> awk -F':' '{print $1}' /etc/group
+
+*To add a user in a group
+:> usermod -aG group_name user_name
+or
+:> usermod -G group_name user_name
+
+*To check a user's group 
+:> groups user_name
+
+*Remove a user from a group
+:> deluser user_name group_name
+or
+:> gpasswd -d user_name group_name
+
+*To delete a group
+:> groupdel group_name
+
+//It is not possible to remove the primary group of an existing user without removing the user first.
+
+//To give sudo previllages to a user you need to add user into sudo group first
+
+*Sudoer privilages through vi /etc/sudoers
+Check pdf: Using sudo to delegate permissions in Linux _ Enable Sysadmin
+
+
+
+

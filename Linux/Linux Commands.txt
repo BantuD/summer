@@ -25,3 +25,10 @@ https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu/
 
 *make compressed tar fiel
 :> tar czf compressedfilename.tar.gz
+
+*Insall something directly withou interferance
+:> apt-get install --no-install-recommends --no-install-suggests -y package_name
+
+*Text file info 
+:> wc --help
+wc [option] file
